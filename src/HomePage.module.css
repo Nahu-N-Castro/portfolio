@@ -1,42 +1,27 @@
-.initialAnimation{
-  background-image: url("public/bucle-night-1.gif");
-  background-position: center;
-  background-size: 130vw;
-  background-repeat: no-repeat;
+.container{
+  display: flex; 
+  justify-content: center;
+}
+
+.gifAnimated{
   height: 100vh;
   width: 100vw;
+  object-fit: cover; 
+  object-position: center; 
   image-rendering: pixelated;           
   -ms-interpolation-mode: nearest-neighbor; 
 }
-.transitionAnimation{
-  background-image: url("public/bucle-night-2.gif");
-  background-position: center;
-  background-size: 130vw;
-  background-repeat: no-repeat;
-  height: 100vh;
-  width: 100vw;
-  image-rendering: pixelated;           
-  -ms-interpolation-mode: nearest-neighbor; 
-}
-.grettingsAnimation{
-  background-image: url("public/bucle-night-3.gif");
-  background-position: center;
-  background-size: 130vw;
-  background-repeat: no-repeat;
-  height: 100vh;
-  width: 100vw;
-  image-rendering: pixelated;           
-  -ms-interpolation-mode: nearest-neighbor; 
-}
-.invisibleInput {
+
+.textBox {
+  display: flex;
+  justify-content: center;
   cursor: pointer;
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100vw;   
-  height: 100vh; 
-  opacity: 0;    
-  border: none;  
-  outline: none; 
-  z-index: 1000;
+  bottom: 550px;
+  left: 300px;
+  width: 40vw;
+     
+  height: 15vh;  
+
+  z-index: 10;
 }

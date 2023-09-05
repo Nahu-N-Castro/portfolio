@@ -5,6 +5,7 @@
 
 .gifAnimated{
   height: 100vh;
+  max-width: 100vw;
   width: 100vw;
   object-fit: cover; 
   object-position: center; 
@@ -13,14 +14,3 @@
   
 }
 
-.textBox {
-  display: flex;
-  justify-content: center;
-  cursor: pointer;
-  position: absolute;
-  bottom: 550px;
-  left: 300px;
-  width: 40vw;
-  height: 15vh;  
-  z-index: 10;
-}

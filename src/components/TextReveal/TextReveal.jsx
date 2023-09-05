@@ -1,69 +1,74 @@
-import { useState, useEffect } from 'react';
-import styles from './TextReveal.module.css'; 
+import { useState, useEffect, useRef } from "react";
+import styles from "./TextReveal.module.css";
 
-const speeds = {
-    pause: 500,
-    slow: 120,
-    normal: 90,
-    fast: 40,
-    superFast: 10
-};
-
-const textLines = [
-    { speed: speeds.slow, string: "Oh, Hola!" },
-    { speed: speeds.pause, string: "", pause: true },
-    { speed: speeds.normal, string: "me llamo" },
-    { speed: speeds.fast, string: "Nahuel", classes: ["red"] },
-    { speed: speeds.pause, string: "", pause: true },
-    { speed: speeds.normal, string: "Soy un desarrollador web" }
+const texts = [
+  { string: "Hola como andas? ", classes: "red", delay: 1000 },
+  { string: "todo bien? ", delay: 5000 },
+  { string: "todo biens? ", delay: 700 },
 ];
 
 function TextReveal() {
-    const [characters, setCharacters] = useState([]);
+  const [text, setText] = useState("");
+  const [textChildren, setTextChildren] = useState([]);
+  const [currentTextIndex, setCurrentTextIndex] = useState(0);
+  const [delay, setDelay] = useState(0);
+  const interval = useRef(null);
 
-    useEffect(() => {
-        let chars = [];
-        textLines.forEach((line, index) => {
-            if (index < textLines.length - 1) {
-                line.string += " ";
-            }
-            line.string.split("").forEach((char) => {
-                chars.push({
-                    char: char,
-                    isSpace: char === " " && !line.pause,
-                    delayAfter: line.speed,
-                    classes: line.classes || [],
-                    revealed: false
-                });
-            });
-        });
-        setCharacters(chars);
+  useEffect(() => {
+    interval.current = setInterval(() => {
+      if (delay != 0) {
+        setDelay(delay > 300 ? delay - 300 : 0);
+        setTimeout(() => {}, delay);
+        return;
+      }
+      const textObject = texts[currentTextIndex];
+      if (textObject === undefined) {
+        clearInterval(interval.current);
+        return;
+      }
 
-        setTimeout(() => {
-            revealOneCharacter(chars, 0);
-        }, 600);
-    }, []);
+      const char = textObject.string[text.length];
+      if (char === undefined) {
+        setDelay(textObject.delay);
+        setText("");
+        setCurrentTextIndex(currentTextIndex + 1);
+        return;
+      }
 
-    const revealOneCharacter = (chars, index) => {
-        if (index < chars.length) {
-            chars[index].revealed = true;
-            setCharacters([...chars]);
-            let delay = chars[index].isSpace && !chars[index].pause ? 0 : chars[index].delayAfter;
-            setTimeout(() => {
-                revealOneCharacter(chars, index + 1);
-            }, delay);
-        }
+      setText(text + char);
+
+      let newChildren = textChildren;
+      newChildren[currentTextIndex] = (
+        <span key={currentTextIndex} className={styles[textObject.classes]}>
+          {text}
+        </span>
+      );
+
+      setTextChildren(textChildren);
+    }, 300);
+    return () => {
+      clearInterval(interval.current);
     };
+  }, [text, textChildren, currentTextIndex, delay]);
 
-    return (
-        <div className={styles.textContainer}>
-        {characters.map((c, index) => (
-            <span key={index} className={`${c.revealed ? styles.revealed : ""} ${c.classes.map(cls => styles[cls]).join(" ")}`}>
-                {c.char}
-            </span>
-        ))}
-    </div>
-    );
+  return (
+    <>
+      <div className={styles.shadowTextContainer}>
+        <p className={styles.wrapped}>
+          {textChildren.map((span) => {
+            return span;
+          })}
+        </p>
+      </div>
+      <div className={styles.textContainer}>
+        <p className={styles.wrapped}>
+          {textChildren.map((span) => {
+            return span;
+          })}
+        </p>
+      </div>
+    </>
+  );
 }
 
 export default TextReveal;

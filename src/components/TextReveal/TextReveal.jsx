@@ -2,7 +2,7 @@ import { useState, useEffect, useRef } from "react";
 import styles from "./TextReveal.module.css";
 
 const texts = [
-  { string: "Hey hola ", delay: 1000 },
+  { string: "Hey hola, ", delay: 1000 },
   { string: "soyY", delay: 500 },
   { string: "Nahuel ", delay: 800, classes: "red"},
   { string: "un desarollador web!", delay: 700 },

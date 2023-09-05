@@ -5,10 +5,24 @@
   font-style: normal;
 
 }
+@font-face {
+  font-family: 'Minecraft'; 
+  src: url('./fonts/Minecraft-Regular.otf');
+  font-weight: normal;
+  font-style: normal;
+
+}
+@font-face {
+  font-family: 'Minecraft'; 
+  src: url('./fonts/Minecraft-Bold.otf');
+  font-weight: bold;
+  font-style: normal;
+
+}
 :root {
-  font-family: "Karmatic";
+  font-family: "Minecraft",sans-serif;
   line-height: 1.5;
-  font-weight: 400;
+  font-weight: normal;
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);

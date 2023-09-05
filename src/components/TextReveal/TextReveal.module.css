@@ -6,8 +6,8 @@
   justify-content: center;
   cursor: pointer;
   position: absolute;
-  bottom: 52vh;
-  left: 4vw;
+  bottom: 55vh;
+  left: 18vw;
   padding: 2vw;   
   
 }
@@ -19,8 +19,8 @@
   justify-content: center;
   cursor: pointer;
   position: absolute;
-  bottom: 51vh;
-  left: 3.5vw;
+  bottom: 54vh;
+  left: 17.9vw;
   padding: 2vw; 
   
 }
@@ -40,6 +40,7 @@
 
 .textContainer span.red {
   color: red;
+  font-weight: bold;
 }
 
 

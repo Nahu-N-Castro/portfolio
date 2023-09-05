@@ -2,9 +2,10 @@ import { useState, useEffect, useRef } from "react";
 import styles from "./TextReveal.module.css";
 
 const texts = [
-  { string: "Hola como andas? ", classes: "red", delay: 1000 },
-  { string: "todo bien? ", delay: 5000 },
-  { string: "todo biens? ", delay: 700 },
+  { string: "Hey hola ", delay: 1000 },
+  { string: "soyY", delay: 500 },
+  { string: "Nahuel ", delay: 800, classes: "red"},
+  { string: "un desarollador web!", delay: 700 },
 ];
 
 function TextReveal() {
@@ -45,7 +46,7 @@ function TextReveal() {
       );
 
       setTextChildren(textChildren);
-    }, 300);
+    }, 80);
     return () => {
       clearInterval(interval.current);
     };

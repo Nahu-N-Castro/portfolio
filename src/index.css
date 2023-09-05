@@ -1,5 +1,12 @@
+@font-face {
+  font-family: 'Karmatic'; 
+  src: url('./fonts/ka1.ttf');
+  font-weight: normal;
+  font-style: normal;
+
+}
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: "Karmatic";
   line-height: 1.5;
   font-weight: 400;
 
@@ -24,6 +31,7 @@ a:hover {
 }
 
 body {
+ 
   margin: 0;
   display: flex;
   place-items: center;

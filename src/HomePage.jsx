@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import styles from "./HomePage.module.css";
 import PropTypes from "prop-types";
+import TextReveal from "./components/TextReveal/TextReveal";
 
 const gifs = [
   { src: "public/bucle-night-1.gif", type: "loop" },
@@ -60,11 +61,9 @@ function HomePage() {
         gifs={gifs}
       />
       {currentGifIndex == 2 && (
-        <img
-          className={styles.textBox}
-          src="public/textbox.svg"
-          alt="text-box"
-        />
+        <>  
+          <TextReveal />
+        </>
       )}
     </div>
   );

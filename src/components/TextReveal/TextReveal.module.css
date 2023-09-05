@@ -1,0 +1,32 @@
+.textContainer {
+  margin: auto;
+  background-image: url("public/textbox.svg");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  position: absolute;
+  bottom: 550px;
+  left: 300px;
+  width: 60vw;
+  height: 15vh;  
+  z-index: 10;
+}
+
+.textContainer span {
+  opacity: 0;
+  color:black;
+  transition: opacity 0.3s;
+}
+
+.textContainer span.revealed {
+  opacity: 1;
+  
+}
+
+.textContainer span.red {
+  color: red;
+}

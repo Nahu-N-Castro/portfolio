@@ -3,10 +3,16 @@ import styles from "./HomePage.module.css";
 import PropTypes from "prop-types";
 import TextReveal from "./components/TextReveal/TextReveal";
 
-const gifs = [
+const gifsNight = [
   { src: "public/bucle-night-1.gif", type: "loop" },
   { src: "public/bucle-night-2.gif", type: "transition" },
   { src: "public/bucle-night-3.gif", type: "loop" },
+  // { src: 'url_del_gif_transicion_2.gif', type: 'transition' }
+];
+const gifsDay = [
+  { src: "public/day-bucle-1.gif", type: "loop" },
+  { src: "public/day-transition-1.gif", type: "transition" },
+  { src: "public/day-bucle-2.gif", type: "loop" },
   // { src: 'url_del_gif_transicion_2.gif', type: 'transition' }
 ];
 
@@ -52,19 +58,29 @@ GifPlayer.propTypes = {
 
 function HomePage() {
   const [currentGifIndex, setCurrentGifIndex] = useState(0);
+  const [mode, setMode] = useState(true);
+
+  useEffect(() => {}, [mode]);
 
   return (
-    <div className={styles.container}>
+    <div className="">
       <GifPlayer
         setCurrentGifIndex={setCurrentGifIndex}
         currentGifIndex={currentGifIndex}
-        gifs={gifs}
+        gifs={mode === true ? gifsNight : gifsDay}
       />
       {currentGifIndex == 2 && (
-        <>  
+        <>
           <TextReveal />
         </>
       )}
+
+      <button
+        className={`${styles.customButton} ${
+          mode ? styles.imageOne : styles.imageTwo
+        }`}
+        onClick={() => setMode(!mode)}>
+      </button>
     </div>
   );
 }

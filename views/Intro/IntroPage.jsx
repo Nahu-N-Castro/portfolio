@@ -1,7 +1,8 @@
 import { useState, useEffect } from "react";
-import styles from "./HomePage.module.css";
+import styles from "./IntroPage.module.css";
 import PropTypes from "prop-types";
-import TextReveal from "./components/TextReveal/TextReveal";
+import TextReveal from "../../src/components/TextReveal/TextReveal";
+import { Navigate } from "react-router-dom";
 
 const gifsNight = [
   { src: "public/bucle-night-1.gif", type: "loop" },
@@ -21,7 +22,7 @@ function GifPlayer({ gifs, currentGifIndex, setCurrentGifIndex }) {
     if (gifs[currentGifIndex].type === "transition") {
       const img = new Image();
       img.src = gifs[currentGifIndex].src;
-      img.onload = function () {
+      img.onload = () => {
         const gifDuration = 1200;
         setTimeout(() => {
           setCurrentGifIndex((prevIndex) => (prevIndex + 1) % gifs.length);
@@ -31,10 +32,13 @@ function GifPlayer({ gifs, currentGifIndex, setCurrentGifIndex }) {
   }, [currentGifIndex, gifs]);
 
   const handlerClick = () => {
-    if (gifs[currentGifIndex].type === "loop") {
+    if (currentGifIndex === gifs.length - 1) {
+      setCurrentGifIndex(-1);
+    } else {
       setCurrentGifIndex((prevIndex) => (prevIndex + 1) % gifs.length);
     }
   };
+
   return (
     <img
       className={styles.gifAnimated}
@@ -56,33 +60,32 @@ GifPlayer.propTypes = {
   setCurrentGifIndex: PropTypes.func.isRequired,
 };
 
-function HomePage() {
+function IntroPage() {
   const [currentGifIndex, setCurrentGifIndex] = useState(0);
   const [mode, setMode] = useState(true);
 
-  useEffect(() => {}, [mode]);
-
   return (
     <div className="">
-      <GifPlayer
-        setCurrentGifIndex={setCurrentGifIndex}
-        currentGifIndex={currentGifIndex}
-        gifs={mode === true ? gifsNight : gifsDay}
-      />
-      {currentGifIndex == 2 && (
-        <>
-          <TextReveal />
-        </>
+      {currentGifIndex > -1 && (
+        <GifPlayer
+          setCurrentGifIndex={setCurrentGifIndex}
+          currentGifIndex={currentGifIndex}
+          gifs={mode ? gifsNight : gifsDay}
+        />
       )}
+
+      {currentGifIndex == 2 && <TextReveal />}
 
       <button
         className={`${styles.customButton} ${
           mode ? styles.imageOne : styles.imageTwo
         }`}
-        onClick={() => setMode(!mode)}>
-      </button>
+        onClick={() => setMode(!mode)}
+      />
+
+      {currentGifIndex === -1 && <Navigate to="/home" />}
     </div>
   );
 }
 
-export default HomePage;
+export default IntroPage;

@@ -50,7 +50,7 @@ function TextReveal() {
       );
   
       setTextChildren(newChildren);
-    }, 80);
+    }, 40);
   
     return () => {
       clearInterval(interval.current);

@@ -5,19 +5,19 @@ function HomePage() {
   return (
     <div className={styles.container}>
       <ul className="absolute left-5 top-10 space-y-7">
-        <li className="text-center cursor-pointer select-none">
+      <li className="text-center cursor-pointer hover:bg-gray-300 hover:bg-opacity-60 focus:border-blue-500 focus:border-2 border-solid focus:outline-none">
         <Link to={"/proyects"}>
           <img className="w-12 mx-auto" src="/carpeta.png" alt="proyectos" />
           <h2 className="select-none text-white">Proyectos</h2>
         </Link>
         </li>
-        <li className="text-center cursor-pointer">
+        <li className="text-center cursor-pointer hover:bg-gray-300 hover:bg-opacity-60 focus:border-blue-500 focus:border-2 border-solid focus:outline-none">
         <Link to={"/games"}>
           <img className="w-12 mx-auto" src="/consola.png" alt="juegos" />
           <h2 className="select-none text-white">Juegos</h2>
           </Link>
         </li>
-        <li className="text-center cursor-pointer">
+        <li className="text-center cursor-pointer hover:bg-gray-300 hover:bg-opacity-60 focus:border-blue-500 focus:border-2 border-solid focus:outline-none">
         <Link to={"/cv"}>
           <img className="w-12 mx-auto" src="/pdf.png" alt="cv" />
           <h2 className="select-none text-white">Curriculum Vitae</h2>

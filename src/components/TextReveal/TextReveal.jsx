@@ -1,7 +1,8 @@
 import { useState, useEffect, useRef } from "react";
+import styles from "./TextReveal.module.css";
 
 const texts = [
-  { string: "Hey hola, ", delay: 1000, classes:"px-1" },
+  { string: "Hey hola, ", delay: 1000, classes: "px-1" },
   { string: "soy ", delay: 500, classes: "px-1" },
   { string: "Nahuel ", delay: 800, classes: "text-red-500 px-1" },
   { string: "un desarollador web! ", delay: 700, classes: "px-1" },
@@ -26,7 +27,7 @@ function TextReveal() {
         clearInterval(interval.current);
         return;
       }
-  
+
       const char = textObject.string[charIndex];
       if (char === undefined) {
         setDelay(textObject.delay);
@@ -35,31 +36,29 @@ function TextReveal() {
         setCharIndex(0);
         return;
       }
-  
+
       setText((prevText) => prevText + char);
       setCharIndex((prevIndex) => prevIndex + 1);
-  
+
       let newChildren = [...textChildren];
       newChildren[currentTextIndex] = (
-        <span
-          key={currentTextIndex}
-          className={`${textObject.classes || ""}`}
-        >
+        <span key={currentTextIndex} className={`${textObject.classes || ""}`}>
           {text}
         </span>
       );
-  
+
       setTextChildren(newChildren);
     }, 40);
-  
+
     return () => {
       clearInterval(interval.current);
     };
   }, [text, textChildren, currentTextIndex, delay, charIndex]);
 
   return (
-    <div className="bg-purple-200 border-4 border-purple-900 flex items-center justify-center cursor-pointer absolute top-1/3 left-1/4 p-8 mt-5">
-      <span className="text-black transition-opacity duration-300 mx-3 px-2 text-xl">
+    <div
+      className={`${styles.customFont} top-0 sm:rounded-tl-2xl sm:rounded-br-2xl sm:rounded-tr-2xl bg-purple-200 border-4 border-purple-900 flex items-center justify-center cursor-pointer absolute sm:top-1/3 sm:left-[50%] xl:top-[40%] p-8 mt-5 `}>
+      <span className="text-black transition-opacity duration-300 mx-1 text-xl">
         {textChildren.map((span) => {
           return span;
         })}

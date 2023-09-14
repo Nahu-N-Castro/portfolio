@@ -1,29 +1,17 @@
+@keyframes blink {
+  0% { opacity: 1; }
+  50% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
 .container{
   display: flex; 
   justify-content: center;
 }
 
 .gifAnimated{
-  height: 100vh;
-  max-width: 100vw;
-  width: 100vw;
-  object-fit: cover; 
-  object-position: center; 
   image-rendering: pixelated;           
   -ms-interpolation-mode: nearest-neighbor; 
-  
-}
-
-.customButton {
-  bottom: 100px;
-  right: 100px;
-  position: absolute;
-  width: 80px;
-  height: 120px;
-  border: none;
-  background-size: cover;
-  background-position: center;
-  outline: none;
 }
 
 .imageOne {
@@ -32,4 +20,16 @@
 
 .imageTwo {
   background-image: url('public/Switch-day.png');
+}
+
+.customOrigin {
+  transform-origin: 33% 54%;
+  background-size: cover;
+  transition: transform .8s; 
+  transform: scale(4.5);
+}
+.clickTo{
+  font-family: "Minecraft"; 
+  animation: blink 1s infinite; 
+  pointer-events: none;
 }

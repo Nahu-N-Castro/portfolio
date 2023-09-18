@@ -1,33 +1,45 @@
-import { Link } from "react-router-dom";
+import { useState } from "react";
 import styles from "./HomePage.module.css";
+import WindowContainer from "../../src/components/WindowContainer/WindowContainer";
+
+const items = [
+  { icon: "/proyectos.png", alt: "proyectos", title: "Proyectos" },
+  { icon: "/juegos.png", alt: "juegos", title: "Juegos" },
+  { icon: "/contacto.png", alt: "contacto", title: "Contacto" },
+  { icon: "/cv.png", alt: "cv", title: "CV.pdf" },
+];
+
+// eslint-disable-next-line react/prop-types
+function ListItem({ icon, alt, title, onSelect }) {
+  return (
+    <li className="flex h-20 w-24 text-center cursor-pointer hover:bg-gray-300 hover:bg-opacity-60 focus:border-blue-500 focus:border-2 border-solid focus:outline-none">
+      <button
+        onClick={() => onSelect(alt)}
+        className="bg-transparent border-none p-0 m-0 text-inherit font-inherit focus:outline-none">
+        <img className="px-7" src={icon} alt={alt} />
+        <h2 className="select-none text-white">{title}</h2>
+      </button>
+    </li>
+  );
+}
 
 function HomePage() {
+  const [selected, setSelected] = useState(null);
   return (
     <div className={styles.container}>
-      <ul className="absolute left-5 top-10 space-y-7">
-      <li className="text-center cursor-pointer hover:bg-gray-300 hover:bg-opacity-60 focus:border-blue-500 focus:border-2 border-solid focus:outline-none">
-        <Link to={"/proyects"}>
-          <img className="w-12 mx-auto" src="/carpeta.png" alt="proyectos" />
-          <h2 className="select-none text-white">Proyectos</h2>
-        </Link>
-        </li>
-        <li className="text-center cursor-pointer hover:bg-gray-300 hover:bg-opacity-60 focus:border-blue-500 focus:border-2 border-solid focus:outline-none">
-        <Link to={"/games"}>
-          <img className="w-12 mx-auto" src="/consola.png" alt="juegos" />
-          <h2 className="select-none text-white">Juegos</h2>
-          </Link>
-        </li>
-        <li className="text-center cursor-pointer hover:bg-gray-300 hover:bg-opacity-60 focus:border-blue-500 focus:border-2 border-solid focus:outline-none">
-        <Link to={"/cv"}>
-          <img className="w-12 mx-auto" src="/pdf.png" alt="cv" />
-          <h2 className="select-none text-white">Curriculum Vitae</h2>
-          </Link>
-        </li>
+      <ul className="flex flex-col justify-center items-center sm:absolute sm:left-10 sm:top-10 space-y-7">
+        {items.map((item) => (
+          <ListItem key={item.alt} onSelect={setSelected} {...item} />
+        ))}
       </ul>
 
-      <div className="absolute bottom-0 left-0 right-0 bg-black bg-opacity-40 h-10 flex items-center px-5">
-        <img className="w-6 h-6" src="/windows-icon.png" alt="inicio" />
-      </div>
+      {selected === "proyectos" && (
+        <WindowContainer onSelect={setSelected} title={"proyectos"}/>
+        
+      )}
+      {selected === "juegos" && (
+        <WindowContainer onSelect={setSelected} title={"juegos"} />
+      )}
     </div>
   );
 }

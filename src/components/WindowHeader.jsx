@@ -4,7 +4,8 @@ const WindowHeader = ({ title, onSelect }) => {
   return (
     <div className="flex w-full items-center justify-between bg-amber-200">
       <div className="flex h-8 justify-center items-center">
-        <img className="h-4 m-2" src={`/${title}.png`} alt={title} />
+        {title && <img className="h-4 m-2" src={`/${title}.png`} alt={title} />}
+
         <h1 className="text-sm text-black capitalize">{title}</h1>
       </div>
       <div className="flex">

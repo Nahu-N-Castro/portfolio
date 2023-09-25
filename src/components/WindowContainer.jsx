@@ -1,19 +1,19 @@
 import { useState } from "react";
-import IconFolder from "../IcoProjects/IcoProjects";
-import WindowHeader from "../WindowHeader/WindowHeader";
-import ProjectContainer from "../ProjectContainer/ProjectContainer";
+import IconFolder from "./IcoProjects";
+import WindowHeader from "./WindowHeader";
+import ProjectContainer from "./ProjectContainer";
 
 /* eslint-disable react/prop-types */
 const WindowContainer = ({ onSelect, title }) => {
   const [project, setProject] = useState(null);
   return (
-    <div className="absolute top-10 flex-col h-[90vh] w-[90vw] sm:w-[80vw] bg-slate-50 z-10 shadow-neutral-700 shadow-md">
+    <div className="absolute h-full w-full sm:top-10 flex-col sm:h-[90vh] sm:w-[80vw] bg-slate-50 z-10 shadow-neutral-700 shadow-md">
       <WindowHeader onSelect={onSelect} title={title} />
       {title === "proyectos" && (
         <section className="flex">
           <div className="flex h-full w-full sm:w-[45%]">
             <IconFolder
-              title="R&M"
+              title="rym"
               imgWidth="w-9"
               imgPosition="top-6 left-6"
               onProject={setProject}
@@ -27,9 +27,13 @@ const WindowContainer = ({ onSelect, title }) => {
             />
           </div>
 
-          {project && <ProjectContainer title={project} onSelect={onSelect} />}
+          {project && (
+            <ProjectContainer title={project} onSelect={setProject} />
+          )}
         </section>
       )}
+    
+
     </div>
   );
 };

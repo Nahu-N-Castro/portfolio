@@ -1,9 +1,12 @@
 import { useState } from "react";
 import styles from "./HomePage.module.css";
-import WindowContainer from "../../src/components/WindowContainer/WindowContainer";
+import WindowContainer from "../../src/components/WindowContainer";
+import DownloadButton from "../../src/components/DownloadButton";
+
 
 const items = [
   { icon: "/proyectos.png", alt: "proyectos", title: "Proyectos" },
+  {icon:"/skills.png",alt:"skills",title: "Habilidades"},
   { icon: "/juegos.png", alt: "juegos", title: "Juegos" },
   { icon: "/contacto.png", alt: "contacto", title: "Contacto" },
   { icon: "/cv.png", alt: "cv", title: "CV.pdf" },
@@ -39,6 +42,9 @@ function HomePage() {
       )}
       {selected === "juegos" && (
         <WindowContainer onSelect={setSelected} title={"juegos"} />
+      )}
+      {selected === "cv" && (
+        <DownloadButton onSelect={setSelected}/>
       )}
     </div>
   );

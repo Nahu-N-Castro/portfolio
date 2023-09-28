@@ -5,16 +5,16 @@ import TextReveal from "../../src/components/TextReveal/TextReveal";
 import { Navigate } from "react-router-dom";
 
 const gifsNight = [
-  { src: "public/bucle-night-1.gif", type: "loop" },
-  { src: "public/bucle-night-2.gif", type: "transition" },
-  { src: "public/bucle-night-3.gif", type: "loop" },
-  { src: "public/bucle-night-4.png", type: "loop" },
+  { src: "public/night-1.gif", type: "loop" },
+  { src: "public/night-2.gif", type: "transition" },
+  { src: "public/night-3.gif", type: "loop" },
+  { src: "public/night-4.png", type: "loop" },
 ];
 const gifsDay = [
-  { src: "public/day-bucle-1.gif", type: "loop" },
-  { src: "public/day-transition-1.gif", type: "transition" },
-  { src: "public/day-bucle-2.gif", type: "loop" },
-  // { src: 'url_del_gif_transicion_2.gif', type: 'transition' }
+  { src: "public/day-1.gif", type: "loop" },
+  { src: "public/day-2.gif", type: "transition" },
+  { src: "public/day-3.gif", type: "loop" },
+  { src: "public/day-4.png", type: "loop" },
 ];
 
 function GifPlayer({ gifs, currentGifIndex, setCurrentGifIndex }) {
@@ -23,7 +23,7 @@ function GifPlayer({ gifs, currentGifIndex, setCurrentGifIndex }) {
       const img = new Image();
       img.src = gifs[currentGifIndex].src;
       img.onload = () => {
-        const gifDuration = 1200;
+        const gifDuration = 600;
         setTimeout(() => {
           setCurrentGifIndex((prevIndex) =>
             prevIndex < 3 ? prevIndex + 1 : null
@@ -70,6 +70,14 @@ function IntroPage() {
   const [currentGifIndex, setCurrentGifIndex] = useState(0);
   const [mode, setMode] = useState(true);
   const [shouldNavigate, setShouldNavigate] = useState(false);
+  const [theme, setTheme] = useState("dark");
+
+  useEffect(() => {
+    mode ? setTheme("dark") : setTheme("light");
+    theme === "dark"
+      ? document.querySelector("html").classList.add("dark")
+      : document.querySelector("html").classList.remove("dark");
+  }, [mode,theme]);
 
   if (currentGifIndex === 3) {
     setTimeout(() => {

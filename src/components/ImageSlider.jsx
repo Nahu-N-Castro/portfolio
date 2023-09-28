@@ -38,10 +38,10 @@ const ImageSlider = ({ slides }) => {
         alt={slides[currentIndex].title}
         className="object-contain h-full w-full"
       />
-      <div className="flex justify-center space-x-2 mt-4">
+      <div className="flex justify-center space-x-2 mt-4 sm:space-x-10">
         {slides.map((_, slideIndex) => (
           <div
-            className="w-4 h-4 bg-black rounded-full cursor-pointer"
+            className="w-4 h-4 bg-black dark:bg-white rounded-full cursor-pointer"
             key={slideIndex}
             onClick={() => goToSlide(slideIndex)}></div>
         ))}

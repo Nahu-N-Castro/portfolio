@@ -7,7 +7,7 @@ import ProjectContainer from "./ProjectContainer";
 const WindowContainer = ({ onSelect, title }) => {
   const [project, setProject] = useState(null);
   return (
-    <div className="absolute h-full w-full sm:top-10 flex-col sm:h-[90vh] sm:w-[80vw] bg-slate-50 z-10 shadow-neutral-700 shadow-md">
+    <div className="absolute h-full w-full sm:top-10 flex-col sm:h-[90vh] sm:w-[80vw] dark:bg-neutral-900 z-10 shadow-neutral-900 bg-purple-100 dark:bg-opacity-90 shadow-lg dark:backdrop-blur-3xl ">
       <WindowHeader onSelect={onSelect} title={title} />
       {title === "proyectos" && (
         <section className="flex">
@@ -32,8 +32,6 @@ const WindowContainer = ({ onSelect, title }) => {
           )}
         </section>
       )}
-    
-
     </div>
   );
 };

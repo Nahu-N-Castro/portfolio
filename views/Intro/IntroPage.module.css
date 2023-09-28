@@ -15,11 +15,11 @@
 }
 
 .imageOne {
-  background-image: url('Switch-night.png');
+  background-image: url('/Switch-night.png');
 }
 
 .imageTwo {
-  background-image: url('Switch-day.png');
+  background-image: url('/Switch-day.png');
 }
 
 .customOrigin {

@@ -5,16 +5,16 @@ import TextReveal from "../../src/components/TextReveal/TextReveal";
 import { Navigate } from "react-router-dom";
 
 const gifsNight = [
-  { src: "public/night-1.gif", type: "loop" },
-  { src: "public/night-2.gif", type: "transition" },
-  { src: "public/night-3.gif", type: "loop" },
-  { src: "public/night-4.png", type: "loop" },
+  { src: "night-1.gif", type: "loop" },
+  { src: "night-2.gif", type: "transition" },
+  { src: "night-3.gif", type: "loop" },
+  { src: "night-4.png", type: "loop" },
 ];
 const gifsDay = [
-  { src: "public/day-1.gif", type: "loop" },
-  { src: "public/day-2.gif", type: "transition" },
-  { src: "public/day-3.gif", type: "loop" },
-  { src: "public/day-4.png", type: "loop" },
+  { src: "day-1.gif", type: "loop" },
+  { src: "day-2.gif", type: "transition" },
+  { src: "day-3.gif", type: "loop" },
+  { src: "day-4.png", type: "loop" },
 ];
 
 function GifPlayer({ gifs, currentGifIndex, setCurrentGifIndex }) {

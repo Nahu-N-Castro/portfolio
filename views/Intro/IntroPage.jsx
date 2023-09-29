@@ -105,7 +105,7 @@ function IntroPage() {
             onClick={() => setMode(!mode)}
           />
           <h2
-            className={`${styles.clickTo} absolute text-xl bottom-0 left-1/2 transform -translate-x-1/2 pb-10`}>
+            className={`${styles.clickTo} absolute text-xl sm:bottom-0 left-1/2 transform -translate-x-1/2 bottom-20 pb-10`}>
             Click to Continue !
           </h2>
         </>

@@ -7,7 +7,22 @@ export default {
   ],
   darkMode: "class",
   theme: {
-    extend: {},
+    extend: {
+      keyframes: {
+        fadeinup: {
+          '0%': { opacity: '0', transform: 'translateY(25em) scale(0.20)' },
+          '100%': { opacity: '1', transform: 'translateY(0) scale(1)' },
+        },
+        fadeoutdown: {
+          '0%': { opacity: '1', transform: 'translateY(0) scale(1)' },
+          '100%': { opacity: '0', transform: 'translateY(25em) scale(0.20)' },
+        },
+      },
+      animation: {
+        fadeinup: 'fadeinup .3s ease-out',
+        fadeoutdown: 'fadeoutdown .3s ease-out',
+      },
+    },
   },
   plugins: [],
 };

@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
-import { useEffect,  useState } from "react";
+import { useEffect, useState } from "react";
 
-const WindowHeader = ({ title, onSelect, setAnimationClass, divRef }) => {
+const WindowHeader = ({ title, onSelect, setAnimationClass }) => {
   const [isDarkMode, setIsDarkMode] = useState(false);
 
   useEffect(() => {
@@ -9,17 +9,16 @@ const WindowHeader = ({ title, onSelect, setAnimationClass, divRef }) => {
   }, [isDarkMode]);
 
   const handleClose = () => {
-    setAnimationClass("animate-fadeoutdown");
-
-    const div = divRef.current;
-
-    div.addEventListener(
-      "animationend",
-      () => {
-        onSelect(false);
-      },
-      { once: true }
-    );
+    if (setAnimationClass != undefined) {
+      setAnimationClass("animate-fadeoutdown");      
+      requestAnimationFrame(() => {
+        setTimeout(() => {
+          onSelect(false);
+        }, 200);
+      });
+    } else {
+      onSelect(false);
+    }
   };
 
   const IconButton = ({
@@ -31,7 +30,7 @@ const WindowHeader = ({ title, onSelect, setAnimationClass, divRef }) => {
   }) => (
     <div
       onClick={onClick}
-      className={`relative bg-transparent border-none p-2 m-0 text-inherit font-inherit h-10 w-11 hover:bg-rose-600 hover:border-none focus:outline-none transition duration-150 ease-in-out ${extraClasses}`}>
+      className={`relative bg-transparent border-none p-2 m-0 text-inherit font-inherit h-10 w-11 hover:bg-rose-900 hover:border-none focus:outline-none transition duration-150 ease-in-out cursor-pointer ${extraClasses}`}>
       <img
         src={!isDarkMode ? srcDark : srcLight}
         alt={alt}

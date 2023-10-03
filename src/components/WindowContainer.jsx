@@ -20,19 +20,9 @@ const WindowContainer = ({ onSelect, title }) => {
       {title === "proyectos" && (
         <section className="flex">
           <div className="flex h-full w-full sm:w-[45%]">
-            <IconFolder
-              title="rym"
-              imgWidth="w-20"
-              imgPosition="top-7 left-10"
-              onProject={setProject}
-            />
+            <IconFolder title="rym" imgWidth="w-8 sm:w-20" onProject={setProject} />
             <IconFolder title="pokedex" onProject={setProject} />
-            <IconFolder
-              title="artify"
-              imgWidth="w-24"
-              imgPosition="top-11 left-8"
-              onProject={setProject}
-            />
+            <IconFolder title="artify" imgWidth="w-12 sm:w-24" onProject={setProject} />
           </div>
 
           {project && (

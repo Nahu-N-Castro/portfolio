@@ -10,7 +10,7 @@ const WindowContainer = ({ onSelect, title }) => {
 
   return (
     <div
-      className={`absolute h-full w-full sm:top-10 flex-col sm:h-[90vh] sm:w-[80vw] dark:bg-neutral-900 z-10 shadow-neutral-900 bg-purple-100 dark:bg-opacity-90 shadow-lg dark:backdrop-blur-3xl animate-fadeinup ${animationClass}`}>
+      className={`absolute h-full w-full sm:top-10 flex-col sm:h-[90vh] sm:w-[80vw] dark:bg-neutral-900 z-10 shadow-neutral-900 bg-purple-100 dark:bg-opacity-90 shadow-lg dark:backdrop-blur-3xl rounded-lg animate-fadeinup overflow-hidden ${animationClass}`}>
       <WindowHeader
         onSelect={onSelect}
         title={title}
@@ -22,15 +22,15 @@ const WindowContainer = ({ onSelect, title }) => {
           <div className="flex h-full w-full sm:w-[45%]">
             <IconFolder
               title="rym"
-              imgWidth="w-9"
-              imgPosition="top-6 left-6"
+              imgWidth="w-20"
+              imgPosition="top-7 left-10"
               onProject={setProject}
             />
             <IconFolder title="pokedex" onProject={setProject} />
             <IconFolder
               title="artify"
-              imgWidth="w-14"
-              imgPosition="top-7 left-3"
+              imgWidth="w-24"
+              imgPosition="top-11 left-8"
               onProject={setProject}
             />
           </div>

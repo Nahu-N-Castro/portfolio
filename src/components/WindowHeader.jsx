@@ -40,7 +40,7 @@ const WindowHeader = ({ title, onSelect, setAnimationClass }) => {
   );
 
   return (
-    <div className="flex w-full items-center justify-between dark:text-white dark:bg-rose-700">
+    <div className="flex w-full items-center justify-between dark:text-white dark:bg-rose-700 shadow-2xl rounded-t-md  shadow-neutral-900">
       <div className="flex h-8 justify-center items-center">
         {title && <img className="h-4 m-2" src={`/${title}.png`} alt={title} />}
         <h1 className="text-sm text-black capitalize dark:text-white">
@@ -56,10 +56,10 @@ const WindowHeader = ({ title, onSelect, setAnimationClass }) => {
         />
         <IconButton
           alt="close"
-          srcDark="/close.png"
+          srcDark="/close.png "
           srcLight="/close-white.png"
           onClick={handleClose}
-          extraClasses="w-12 hover:bg-red-600"
+          extraClasses="w-12 hover:bg-red-600 rounded-tr-md "
         />
       </div>
     </div>

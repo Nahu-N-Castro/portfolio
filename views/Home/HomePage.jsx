@@ -29,21 +29,19 @@ function ListItem({ icon, alt, title, onSelect }) {
 function HomePage() {
   const [selected, setSelected] = useState(null);
 
-  const handleChangeTheme = () => {
-    const htmlElement = document.querySelector("html");
+  // const handleChangeTheme = () => {
+  //   const htmlElement = document.querySelector("html");
 
-    if (htmlElement.classList.contains("dark")) {
-      htmlElement.classList.remove("dark");
-    } else {
-      htmlElement.classList.add("dark");
-    }
-  };
+  //   if (htmlElement.classList.contains("dark")) {
+  //     htmlElement.classList.remove("dark");
+  //   } else {
+  //     htmlElement.classList.add("dark");
+  //   }
+  // };
 
   return (
     <div className={styles.container}>
-      <nav>
-        <button onClick={handleChangeTheme}>HOLA</button>
-      </nav>
+      <nav>{/* <button onClick={handleChangeTheme}>hola</button> */}</nav>
       <ul className="flex flex-col justify-center items-center sm:absolute sm:left-10 sm:top-10 space-y-7">
         {items.map((item) => (
           <ListItem key={item.alt} onSelect={setSelected} {...item} />

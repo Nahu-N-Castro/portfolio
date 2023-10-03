@@ -3,6 +3,7 @@ import { useState } from "react";
 import WindowHeader from "./WindowHeader";
 import projects from "../utils/projects";
 import ImageSlider from "./ImageSlider";
+import Draggable from "react-draggable";
 
 const ProjectContainer = ({ onSelect, title }) => {
   const imagesSrc = [
@@ -16,33 +17,43 @@ const ProjectContainer = ({ onSelect, title }) => {
   ];
   const [content, setContent] = useState(true);
   return (
-    <div className="absolute top-0 right-0 md:left-auto md:right-0 w-full md:w-2/3 h-full md:py-16 md:px-5 text-black z-20 animate-fadein">
-      <WindowHeader onSelect={onSelect} title={title}/>
-      <div className="bg-amber-50 dark:bg-transparent p-5  max-h-[85%] sm:max-h-[95%] overflow-y-auto animate-fadein">
-        <ImageSlider slides={imagesSrc} />
+    <Draggable>
+      <div className="absolute top-16 right-0 md:mx-8 md:left-auto md:right-0 w-full md:w-2/3 h-fit  text-black z-40 animate-fadein overflow-auto">
+        <WindowHeader onSelect={onSelect} title={title} />
+        <div className="absoulte dark:bg-neutral-900 z-10 shadow-neutral-900 bg-purple-100 dark:bg-opacity-90 shadow-lg dark:backdrop-blur-3xl p-5 max-h-[40rem] sm:max-h-[40rem] overflow-y-auto animate-fadein rounded-b-md">
+          <ImageSlider slides={imagesSrc} />
 
-        <button
-          onClick={() => setContent(true)}
-          className={`rounded-r-none rounded-bl-none p-2 focus:outline-none ${
-            content ? "bg-rose-600 dark:bg-rose-200" : "text-white"
-          }`}>
-          Documentación
-        </button>
-        <button
-          onClick={() => setContent(false)}
-          className={`rounded-l-none rounded-br-none p-2 focus:outline-none ${
-            !content ? "bg-rose-600 dark:bg-rose-200" : "text-white"
-          }`}>
-          Detalle
-        </button>
+          <button
+            onClick={() => setContent(true)}
+            className={`rounded-r-none rounded-bl-none p-2 focus:outline-none border-0 text-white ${
+              content
+                ? "bg-rose-600 dark:bg-neutral-800 hover:border-0"
+                : "font-extralight"
+            }`}>
+            Documentación
+          </button>
+          <button
+            onClick={() => setContent(false)}
+            className={`rounded-l-none rounded-br-none p-2 focus:outline-none hover:outline-none border-0 text-white ${
+              !content
+                ? "bg-rose-600 dark:bg-neutral-800 hover:border-0"
+                : "font-extralight"
+            }`}>
+            ¿Qué hice?
+          </button>
 
-        {content ? (
-          <div className="bg-amber-200 dark:bg-rose-200 p-5">{projects[title].overview}</div>
-        ) : (
-          <div className="bg-amber-200 dark:bg-rose-200 p-5">{projects[title].detail}</div>
-        )}
+          {content ? (
+            <div className="">
+              {projects[title].detail}
+            </div>
+          ) : (
+            <div className="overflow-y-auto max-h-[45%]">
+              {projects[title].overview}
+            </div>
+          )}
+        </div>
       </div>
-    </div>
+    </Draggable>
   );
 };
 

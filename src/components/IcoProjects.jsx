@@ -11,7 +11,7 @@ function IconFolder({ title, imgWidth, imgPosition, onProject }) {
       <img className="w-40" src="/carpeta-win.png" alt="background" />
       <img 
         className={`absolute ${imgPosition || "top-[55%] left-1/2 transform -translate-x-1/2 -translate-y-1/2"} ${
-          imgWidth || "w-10 sm:w-20"
+          imgWidth || "w-20"
         } opacity-80 `}
         src={`/${title}.png`}
         alt={title}

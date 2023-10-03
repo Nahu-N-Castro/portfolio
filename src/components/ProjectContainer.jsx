@@ -16,8 +16,10 @@ const ProjectContainer = ({ onSelect, title }) => {
     { url: `${title}/captura-07.png`, title: title },
   ];
   const [content, setContent] = useState(true);
+  const isMobile = window.innerWidth <= 767;
+
   return (
-    <Draggable>
+    <Draggable disabled={isMobile}>
       <div className="absolute top-16 right-0 md:mx-8 md:left-auto md:right-0 w-full md:w-2/3 h-fit  text-black z-40 animate-fadein overflow-auto">
         <WindowHeader onSelect={onSelect} title={title} />
         <div className="absoulte dark:bg-neutral-900 z-10 shadow-neutral-900 bg-purple-100 dark:bg-opacity-90 shadow-lg dark:backdrop-blur-3xl p-5 max-h-[40rem] sm:max-h-[40rem] overflow-y-auto animate-fadein rounded-b-md">
@@ -43,9 +45,7 @@ const ProjectContainer = ({ onSelect, title }) => {
           </button>
 
           {content ? (
-            <div className="">
-              {projects[title].detail}
-            </div>
+            <div className="">{projects[title].detail}</div>
           ) : (
             <div className="overflow-y-auto max-h-[45%]">
               {projects[title].overview}

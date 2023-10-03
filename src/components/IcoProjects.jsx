@@ -7,16 +7,16 @@ function IconFolder({ title, imgWidth, imgPosition, onProject }) {
   return (
     <div
       onClick={handleClick}
-      className="relative items-center w-fit h-fit m-5 hover:-translate-y-1 transition-transform cursor-pointer">
-      <img className="w-20" src="/carpeta-win.png" alt="background" />
-      <img
-        className={`absolute ${imgPosition || "top-7 left-6"} z-10 ${
-          imgWidth || "w-9"
-        } opacity-80`}
+      className="relative items-center w-fit h-fit m-7 hover:-translate-y-2 transition-transform cursor-pointer">
+      <img className="w-40" src="/carpeta-win.png" alt="background" />
+      <img 
+        className={`absolute ${imgPosition || "top-9 left-10"} ${
+          imgWidth || "w-20"
+        } opacity-80 `}
         src={`/${title}.png`}
         alt={title}
       />
-      <h2 className="absolute left-1/2 transform -translate-x-1/2 text-black capitalize dark:text-white">
+      <h2 className="absolute mt-2 left-1/2 transform -translate-x-1/2 text-black text-lg capitalize dark:text-white">
         {title}
       </h2>
     </div>

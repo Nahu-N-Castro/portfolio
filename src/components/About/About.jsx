@@ -1,17 +1,9 @@
 import { useState } from "react";
-import GifPlayer from "../GifPlayer/GifPlayer";
 import BackgroundParticles from "../BackgroundParticles";
 import style from "./About.module.css";
 import VignetteText from "../VignetteText";
-// import TextReveal from "../TextReveal/TextReveal";
 
-const gifsMe = [
-  { src: "/standby.gif", type: "loop" },
-  { src: "/talking.gif", type: "transition" },
-  { src: "/standby.gif", type: "loop" },
-  { src: "/talking.gif", type: "transition" },
-  { src: "/standby.gif", type: "loop" },
-];
+const gifsMe = [{ src: "/standby.gif" }, { src: "/talking.gif" }];
 
 const textAbout = [
   [
@@ -36,30 +28,29 @@ const textAbout = [
       ingeniería y la intensidad del Bootcamp de SoyHenry han potenciado mi
       habilidad para enfrentar desafíos y resolver problemas de manera
       eficiente. Además, mis experiencias académicas y prácticas han cultivado
-      mi capacidad para colaborar y liderar equipos , fomentando un ambiente
-      de trabajo productivo y cooperativo.
+      mi capacidad para colaborar y liderar equipos , fomentando un ambiente de
+      trabajo productivo y cooperativo.
     </span>,
   ],
   [
     <span key={4} className="animate-fade-right">
-      Veo la comunicación  como un pilar fundamental que me permite trabajar
+      Veo la comunicación como un pilar fundamental que me permite trabajar
       eficazmente tanto en equipos como en proyectos individuales. Además,
-      valoro mantener una organización  clara y eficiente.
+      valoro mantener una organización clara y eficiente.
     </span>,
   ],
   [
     <span key={5} className="animate-fade-right">
-      Me emociona la oportunidad de aplicar mi pasión  por la programación, mi
+      Me emociona la oportunidad de aplicar mi pasión por la programación, mi
       curiosidad innata y mi constante deseo de aprender en nuevos proyectos y
       desafíos. Cada paso en este camino lo veo como una oportunidad para crecer
-       y continuar desarrollándome profesionalmente. Estoy interesado en
-      unirme a un equipo que valore la creatividad, la innovación y la
-      colaboración, y esté comprometido con ofrecer resultados de alta calidad a
-      sus clientes.
+      y continuar desarrollándome profesionalmente. Estoy interesado en unirme a
+      un equipo que valore la creatividad, la innovación y la colaboración, y
+      esté comprometido con ofrecer resultados de alta calidad a sus clientes.
     </span>,
   ],
   [
-    <span key={5} className="animate-fade-right">
+    <span key={5} className="animate-fade-left">
       Si estás buscando a alguien con habilidades en JavaScript, React, Redux,
       Next.js, CSS, Tailwind, Figma, Express, PostgreSQL y Git, no dudes en
       contactarme . ¡Será un placer trabajar juntos!
@@ -81,24 +72,21 @@ function About() {
         <span style={{ "--l": "'L'" }}>L</span>
       </div>
 
-      <div className="flex justify-center pb-5 sm:pb-10 font-minecraft text-[#F5F1DE] text-lg sm:text-4xl">
+      <div className="flex justify-center pb-5 sm:pb-10 font-minecraft text-[#F5F1DE] text-lg md:text-xl lg:text-4xl">
         <span className={style.dev} style={{ "--d": "'Full Stack Developer'" }}>
           Full Stack Developer
         </span>
       </div>
 
-      <div className="flex h-[30rem] sm:h-[20rem] sm:mx-64  items-end justify-start">
-        {<VignetteText text={textAbout} />}
-      </div>
-
-      <div className="absolute -bottom-3 mx-10 h-60 sm:h-96 z-50">
-        <GifPlayer
-          gifDuration={4200}
-          setCurrentGifIndex={setCurrentGifIndex}
-          currentGifIndex={currentGifIndex}
+      <div className="flex justify-center items-end h-[48%] xsm:h-[51%] sm:h-[35%] md:h-[25%] sm:mt-10 sm:justify-start mx-2 xl:mx-52 lg:my-40 md:items-end ">
+        <VignetteText
+          setCurrentIndex={setCurrentGifIndex}
+          currentIndex={currentGifIndex}
+          text={textAbout}
           gifs={gifsMe}
         />
       </div>
+
       <BackgroundParticles widthRem={50} heightRem={40} />
     </section>
   );

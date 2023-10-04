@@ -38,7 +38,9 @@ function VignetteText({ text, gifs }) {
           <button
             disabled={firstIndex}
             className={`active:translate-y-1 flex p-1 z-50 cursor-pointer hover:border-0 focus:outline-none hover:outline-none border-0 ${
-              firstIndex ? "opacity-50 cursor-not-allowed active:translate-y-0" : ""
+              firstIndex
+                ? "opacity-50 cursor-not-allowed active:translate-y-0"
+                : ""
             }`}
             onClick={goToPrevious}>
             <img
@@ -51,7 +53,9 @@ function VignetteText({ text, gifs }) {
           <button
             disabled={lastIndex}
             className={`active:translate-y-1 flex p-1  z-50 cursor-pointer hover:border-0 focus:outline-none hover:outline-none border-0 ${
-              lastIndex ? "opacity-50 cursor-not-allowed active:translate-y-0" : ""
+              lastIndex
+                ? "opacity-50 cursor-not-allowed active:translate-y-0"
+                : ""
             }`}
             onClick={goToNext}>
             <img className="h-10" src="/arrow.png" alt="arrow" />

@@ -9,7 +9,6 @@ const items = [
   { icon: "/proyectos.png", alt: "proyectos", title: "Proyectos" },
   { icon: "/skills.png", alt: "skills", title: "Habilidades" },
   { icon: "/about.png", alt: "about", title: "About" },
-  { icon: "/juegos.png", alt: "juegos", title: "Juegos" },
   { icon: "/contacto.png", alt: "contacto", title: "Contacto" },
   { icon: "/Curriculum Vitae.png", alt: "cv", title: "CV.pdf" },
 ];
@@ -38,9 +37,10 @@ function HomePage() {
         ))}
       </ul>
 
+
       {(selected === "proyectos" ||
-        selected === "juegos" ||
         selected === "about" ||
+        selected === "contacto" ||
         selected === "skills") && (
         <WindowContainer onSelect={setSelected} title={selected} />
       )}

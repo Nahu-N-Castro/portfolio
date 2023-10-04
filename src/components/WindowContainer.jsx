@@ -3,6 +3,7 @@ import WindowHeader from "./WindowHeader";
 import About from "./About/About";
 import Projects from "./Projects";
 import Skills from "./Skills";
+import Contact from "./Contact";
 
 /* eslint-disable react/prop-types */
 const WindowContainer = ({ onSelect, title }) => {
@@ -20,6 +21,7 @@ const WindowContainer = ({ onSelect, title }) => {
       {title === "proyectos" && <Projects />}
       {title === "about" && <About />}
       {title === "skills" && <Skills />}
+      {title === "contacto" && <Contact />}
     </div>
   );
 };

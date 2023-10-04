@@ -8,6 +8,12 @@ export default {
   darkMode: "class",
   theme: {
     extend: {
+      fontFamily: {
+        'minecraft': 'Minecraft'
+      },
+      boxShadow: {
+        'custom-oval': '0 4px 6px rgba(0, 0, 0, 0.1), 0 10px 15px rgba(0, 0, 0, 0.2)',
+      },
       keyframes: {
         fadeinup: {
           "0%": { opacity: "1", transform: "translateY(25em) scale(0.20)" },

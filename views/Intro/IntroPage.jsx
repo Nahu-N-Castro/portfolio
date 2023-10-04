@@ -28,7 +28,7 @@ function IntroPage() {
     theme === "dark"
       ? document.querySelector("html").classList.add("dark")
       : document.querySelector("html").classList.remove("dark");
-  }, [mode,theme]);
+  }, [mode, theme]);
 
   if (currentGifIndex === 3) {
     setTimeout(() => {
@@ -39,6 +39,7 @@ function IntroPage() {
     <div className="relative h-screen w-screen">
       {currentGifIndex > -1 && (
         <GifPlayer
+          gifDuration={580}
           setCurrentGifIndex={setCurrentGifIndex}
           currentGifIndex={currentGifIndex}
           gifs={mode ? gifsNight : gifsDay}

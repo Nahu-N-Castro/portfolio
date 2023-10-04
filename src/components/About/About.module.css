@@ -1,9 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap");
 
 .container{
+  width: 100%;
+  height: 11rem;
   display: flex;
   justify-content: center;
   z-index: 100;
+ 
 }
 
 .container span{
@@ -16,8 +19,11 @@
   position: relative;
 }
 @media (max-width: 654px) {
+  .container{
+    height: 5rem;
+  }
   .container span {
-    font-size: 4rem; /* Suponiendo que deseabas reducir a la mitad el tamaño para móviles */
+    font-size: 4rem; 
   }
   
 }

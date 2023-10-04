@@ -1,12 +1,11 @@
 import { useState } from "react";
-import IconFolder from "./IcoProjects";
 import WindowHeader from "./WindowHeader";
-import ProjectContainer from "./ProjectContainer";
 import About from "./About/About";
+import Projects from "./Projects";
+import Skills from "./Skills";
 
 /* eslint-disable react/prop-types */
 const WindowContainer = ({ onSelect, title }) => {
-  const [project, setProject] = useState(null);
   const [animationClass, setAnimationClass] = useState("");
 
   return (
@@ -18,20 +17,9 @@ const WindowContainer = ({ onSelect, title }) => {
         setAnimationClass={setAnimationClass}
         context={"project"}
       />
-      {title === "proyectos" && (
-        <section className="flex ">
-          <div className="grid grid-cols-2 sm:grid-cols-3 h-full w-full sm:w-[35%]">
-            <IconFolder title="rym" imgWidth="w-20 " onProject={setProject} />
-            <IconFolder title="pokedex" onProject={setProject} />
-            <IconFolder title="artify" imgWidth="w-24" onProject={setProject} />
-          </div>
-
-          {project && (
-            <ProjectContainer title={project} onSelect={setProject} />
-          )}
-        </section>
-      )}
+      {title === "proyectos" && <Projects />}
       {title === "about" && <About />}
+      {title === "skills" && <Skills />}
     </div>
   );
 };

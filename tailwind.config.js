@@ -8,6 +8,9 @@ export default {
   darkMode: "class",
   theme: {
     extend: {
+      screens: {
+        'xsm': '380px',
+      },
       fontFamily: {
         'minecraft': 'Minecraft'
       },

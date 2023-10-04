@@ -34,11 +34,11 @@ function VignetteText({ text, gifs }) {
       <section className="text-xs xsm:text-base sm:text-base md:text-xl lg:text-3xl bg-slate-50 border-4 border-zinc-950 text-black font-minecraft rounded-t-3xl rounded-br-3xl shadow-md shadow-black ">
         <div className="pt-5 mx-5 sm:mx-10 ">{text[currentIndex]}</div>
 
-        <div className="flex justify-end w-full">
+        <div className="flex p-1 justify-end w-full">
           <button
             disabled={firstIndex}
-            className={`flex p-1 z-50 cursor-pointer hover:border-0 focus:outline-none hover:outline-none border-0 ${
-              firstIndex ? "opacity-50 cursor-not-allowed" : ""
+            className={`active:translate-y-1 flex p-1 z-50 cursor-pointer hover:border-0 focus:outline-none hover:outline-none border-0 ${
+              firstIndex ? "opacity-50 cursor-not-allowed active:translate-y-0" : ""
             }`}
             onClick={goToPrevious}>
             <img
@@ -50,8 +50,8 @@ function VignetteText({ text, gifs }) {
 
           <button
             disabled={lastIndex}
-            className={`flex p-1  z-50 cursor-pointer hover:border-0 focus:outline-none hover:outline-none border-0 ${
-              lastIndex ? "opacity-50 cursor-not-allowed" : ""
+            className={`active:translate-y-1 flex p-1  z-50 cursor-pointer hover:border-0 focus:outline-none hover:outline-none border-0 ${
+              lastIndex ? "opacity-50 cursor-not-allowed active:translate-y-0" : ""
             }`}
             onClick={goToNext}>
             <img className="h-10" src="/arrow.png" alt="arrow" />

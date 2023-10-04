@@ -31,7 +31,7 @@ function GifPlayer({ gifs, currentGifIndex, setCurrentGifIndex, gifDuration }) {
       className={`${
         styles.gifAnimated
       } h-full w-full max-w-screen object-cover object-center ${
-        currentGifIndex === gifs.length ? styles.customOrigin : ""
+        currentGifIndex === gifs.length - 1 && gifDuration > 600 ? styles.customOrigin : ""
       }`}
       src={gifs[currentGifIndex].src}
       alt="gif"

@@ -22,12 +22,7 @@
   background-image: url('/Switch-day.png');
 }
 
-.customOrigin {
-  transform-origin: 33% 54%;
-  background-size: cover;
-  transition: transform .8s; 
-  transform: scale(4.5);
-}
+
 .clickTo{
   font-family: "Minecraft"; 
   animation: blink 1s infinite; 

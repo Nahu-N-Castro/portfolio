@@ -1,8 +1,8 @@
 import { useState, useEffect } from "react";
 import styles from "./IntroPage.module.css";
-import PropTypes from "prop-types";
 import TextReveal from "../../src/components/TextReveal/TextReveal";
 import { Navigate } from "react-router-dom";
+import GifPlayer from "../../src/components/GifPlayer/GifPlayer";
 
 const gifsNight = [
   { src: "night-1.gif", type: "loop" },
@@ -16,55 +16,6 @@ const gifsDay = [
   { src: "day-3.gif", type: "loop" },
   { src: "day-4.png", type: "loop" },
 ];
-
-function GifPlayer({ gifs, currentGifIndex, setCurrentGifIndex }) {
-  useEffect(() => {
-    if (gifs[currentGifIndex].type === "transition") {
-      const img = new Image();
-      img.src = gifs[currentGifIndex].src;
-      img.onload = () => {
-        const gifDuration = 600;
-        setTimeout(() => {
-          setCurrentGifIndex((prevIndex) =>
-            prevIndex < 3 ? prevIndex + 1 : null
-          );
-        }, gifDuration);
-      };
-    }
-  }, [currentGifIndex, gifs]);
-
-  const handlerClick = () => {
-    if (currentGifIndex === gifs.length - 1) {
-      setCurrentGifIndex(-1);
-    } else {
-      setCurrentGifIndex((prevIndex) => (prevIndex < 3 ? prevIndex + 1 : null));
-    }
-  };
-
-  return (
-    <img
-      className={`${
-        styles.gifAnimated
-      } h-screen w-screen max-w-screen object-cover object-center ${
-        currentGifIndex === 3 ? styles.customOrigin : ""
-      }`}
-      src={gifs[currentGifIndex].src}
-      alt="gif"
-      onClick={handlerClick}
-    />
-  );
-}
-
-GifPlayer.propTypes = {
-  gifs: PropTypes.arrayOf(
-    PropTypes.shape({
-      src: PropTypes.string.isRequired,
-      type: PropTypes.string.isRequired,
-    })
-  ).isRequired,
-  currentGifIndex: PropTypes.number.isRequired,
-  setCurrentGifIndex: PropTypes.func.isRequired,
-};
 
 function IntroPage() {
   const [currentGifIndex, setCurrentGifIndex] = useState(0);
@@ -85,7 +36,7 @@ function IntroPage() {
     }, 800);
   }
   return (
-    <div className="relative">
+    <div className="relative h-screen w-screen">
       {currentGifIndex > -1 && (
         <GifPlayer
           setCurrentGifIndex={setCurrentGifIndex}

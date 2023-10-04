@@ -48,7 +48,9 @@ function HomePage() {
         ))}
       </ul>
 
-      {(selected === "proyectos" || selected === "juegos") && (
+      {(selected === "proyectos" ||
+        selected === "juegos" ||
+        selected === "about") && (
         <WindowContainer onSelect={setSelected} title={selected} />
       )}
       {selected === "cv" && <DownloadButton onSelect={setSelected} />}

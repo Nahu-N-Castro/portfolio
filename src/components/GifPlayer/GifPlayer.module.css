@@ -1,0 +1,10 @@
+.gifAnimated{
+  image-rendering: pixelated;           
+  -ms-interpolation-mode: nearest-neighbor; 
+}
+.customOrigin {
+  transform-origin: 33% 54%;
+  background-size: cover;
+  transition: transform .8s; 
+  transform: scale(4.5);
+}

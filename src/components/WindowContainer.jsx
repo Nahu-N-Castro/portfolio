@@ -2,6 +2,7 @@ import { useState } from "react";
 import IconFolder from "./IcoProjects";
 import WindowHeader from "./WindowHeader";
 import ProjectContainer from "./ProjectContainer";
+import About from "./About/About";
 
 /* eslint-disable react/prop-types */
 const WindowContainer = ({ onSelect, title }) => {
@@ -10,7 +11,7 @@ const WindowContainer = ({ onSelect, title }) => {
 
   return (
     <div
-      className={`absolute h-full w-full sm:top-10 flex-col sm:h-[90vh] sm:w-[80vw] dark:bg-neutral-900 z-10 shadow-neutral-900 bg-purple-100 dark:bg-opacity-90 shadow-lg dark:backdrop-blur-3xl rounded-lg animate-fadeinup overflow-hidden ${animationClass}`}>
+      className={`absolute h-full w-full sm:top-10 flex-col sm:h-[90%] sm:w-[80%] dark:bg-neutral-900 z-10 shadow-neutral-900 bg-purple-100 dark:bg-opacity-90 shadow-lg dark:backdrop-blur-3xl rounded-lg animate-fadeinup overflow-hidden ${animationClass}`}>
       <WindowHeader
         onSelect={onSelect}
         title={title}
@@ -30,6 +31,7 @@ const WindowContainer = ({ onSelect, title }) => {
           )}
         </section>
       )}
+      {title === "about" && <About />}
     </div>
   );
 };

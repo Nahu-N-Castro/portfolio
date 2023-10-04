@@ -27,6 +27,15 @@
   }
   
 }
+@media (max-width: 768px) {
+  .container{
+    height: 5rem;
+  }
+  .container span {
+    font-size: 4rem; 
+  }
+  
+}
 
 
 .container span::before {

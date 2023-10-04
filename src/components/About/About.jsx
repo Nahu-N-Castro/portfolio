@@ -58,6 +58,8 @@ const textAbout = [
   ],
 ];
 
+const isMobile = window.innerWidth <= 767;
+
 function About() {
   const [currentGifIndex, setCurrentGifIndex] = useState(0);
 
@@ -87,7 +89,11 @@ function About() {
         />
       </div>
 
-      <BackgroundParticles widthRem={50} heightRem={40} />
+      <BackgroundParticles
+        widthRem={50}
+        heightRem={40}
+        num={isMobile ? 5 : 30}
+      />
     </section>
   );
 }

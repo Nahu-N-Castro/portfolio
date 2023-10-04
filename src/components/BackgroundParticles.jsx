@@ -1,8 +1,6 @@
 /* eslint-disable react/prop-types */
 import { useEffect, useState } from "react";
 
-const NUM_PARTICLES = 30;
-
 function remToPx(remValue) {
   return (
     remValue * parseFloat(getComputedStyle(document.documentElement).fontSize)
@@ -13,7 +11,7 @@ function getRandom(min, max) {
   return Math.random() * (max - min) + min;
 }
 
-function generateParticles() {
+function generateParticles(num) {
   const icons = [
     "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/slack/slack-original-wordmark.svg",
     "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
@@ -28,7 +26,7 @@ function generateParticles() {
   ];
 
   let particles = [];
-  for (let i = 0; i < NUM_PARTICLES; i++) {
+  for (let i = 0; i < num; i++) {
     particles.push({
       id: i,
       x: getRandom(0, window.innerWidth),
@@ -41,8 +39,8 @@ function generateParticles() {
   return particles;
 }
 
-function BackgroundParticles({ widthRem, heightRem }) {
-  const [particles, setParticles] = useState(generateParticles());
+function BackgroundParticles({ widthRem, heightRem, num }) {
+  const [particles, setParticles] = useState(generateParticles(num));
   const width = remToPx(widthRem);
   const height = remToPx(heightRem);
 

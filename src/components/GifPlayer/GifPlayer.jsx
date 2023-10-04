@@ -1,17 +1,17 @@
+/* eslint-disable react/prop-types */
 import { useEffect } from "react";
 import styles from "./GifPlayer.module.css";
 import PropTypes from "prop-types";
 
-function GifPlayer({ gifs, currentGifIndex, setCurrentGifIndex }) {
+function GifPlayer({ gifs, currentGifIndex, setCurrentGifIndex, gifDuration }) {
   useEffect(() => {
     if (gifs[currentGifIndex].type === "transition") {
       const img = new Image();
       img.src = gifs[currentGifIndex].src;
       img.onload = () => {
-        const gifDuration = 600;
         setTimeout(() => {
           setCurrentGifIndex((prevIndex) =>
-            prevIndex < 3 ? prevIndex + 1 : null
+            prevIndex < gifs.length ? prevIndex + 1 : 0
           );
         }, gifDuration);
       };
@@ -20,9 +20,9 @@ function GifPlayer({ gifs, currentGifIndex, setCurrentGifIndex }) {
 
   const handlerClick = () => {
     if (currentGifIndex === gifs.length - 1) {
-      setCurrentGifIndex(-1);
+      setCurrentGifIndex(0);
     } else {
-      setCurrentGifIndex((prevIndex) => (prevIndex < 3 ? prevIndex + 1 : null));
+      setCurrentGifIndex((prevIndex) => (prevIndex < gifs.length ? prevIndex + 1 : 0));
     }
   };
 
@@ -31,7 +31,7 @@ function GifPlayer({ gifs, currentGifIndex, setCurrentGifIndex }) {
       className={`${
         styles.gifAnimated
       } h-full w-full max-w-screen object-cover object-center ${
-        currentGifIndex === 3 ? styles.customOrigin : ""
+        currentGifIndex === gifs.length ? styles.customOrigin : ""
       }`}
       src={gifs[currentGifIndex].src}
       alt="gif"

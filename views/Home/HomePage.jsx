@@ -3,6 +3,7 @@ import { useState } from "react";
 import styles from "./HomePage.module.css";
 import WindowContainer from "../../src/components/WindowContainer";
 import DownloadButton from "../../src/components/DownloadButton";
+import ListItem from "../../src/components/ListItem";
 
 const items = [
   { icon: "/proyectos.png", alt: "proyectos", title: "Proyectos" },
@@ -13,21 +14,10 @@ const items = [
   { icon: "/Curriculum Vitae.png", alt: "cv", title: "CV.pdf" },
 ];
 
-function ListItem({ icon, alt, title, onSelect }) {
-  return (
-    <li className="flex h-20 w-24 text-center cursor-pointer hover:bg-gray-300 hover:bg-opacity-60 focus:border-blue-500 focus:border-2 border-solid focus:outline-none">
-      <button
-        onClick={() => onSelect(alt)}
-        className="bg-transparent border-none p-0 m-0 text-inherit font-inherit focus:outline-none">
-        <img className="px-7" src={icon} alt={alt} />
-        <h2 className="select-none text-white">{title}</h2>
-      </button>
-    </li>
-  );
-}
-
 function HomePage() {
   const [selected, setSelected] = useState(null);
+
+
 
   // const handleChangeTheme = () => {
   //   const htmlElement = document.querySelector("html");
@@ -50,7 +40,8 @@ function HomePage() {
 
       {(selected === "proyectos" ||
         selected === "juegos" ||
-        selected === "about") && (
+        selected === "about" ||
+        selected === "skills") && (
         <WindowContainer onSelect={setSelected} title={selected} />
       )}
       {selected === "cv" && <DownloadButton onSelect={setSelected} />}

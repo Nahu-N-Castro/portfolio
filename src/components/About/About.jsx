@@ -2,16 +2,24 @@ import { useState } from "react";
 import GifPlayer from "../GifPlayer/GifPlayer";
 import BackgroundParticles from "../BackgroundParticles";
 import style from "./About.module.css";
+// import TextReveal from "../TextReveal/TextReveal";
+
+const gifsMe = [
+  { src: "/standby.gif", type: "loop" },
+  { src: "/talking.gif", type: "transition" },
+  { src: "/standby.gif", type: "loop" },
+  { src: "/talking.gif", type: "transition" },
+  { src: "/standby.gif", type: "loop" },
+];
 
 function About() {
   const [currentGifIndex, setCurrentGifIndex] = useState(0);
-  const gifsMe = [
-    { src: "/standby.gif", type: "loop" },
-    { src: "/talking.gif", type: "transition" },
-    { src: "/standby.gif", type: "loop" },
-    { src: "/talking.gif", type: "transition" },
-    { src: "/standby.gif", type: "loop" },
-  ];
+  // const text = [
+  //   { string: "Hola, ", delay: 1000, classes: "px-1" },
+  //   { string: "soy ", delay: 500, classes: "px-1" },
+  //   { string: "Nahuel ", delay: 800, classes: "text-red-500 px-1" },
+  //   { string: "un desarollador web! ", delay: 700, classes: "px-1" },
+  // ];
   return (
     <section className="grid grid-rows-2 h-full w-full z-10">
       <div className={style.container}>
@@ -23,13 +31,15 @@ function About() {
         <span style={{ "--l": "'L'" }}>L</span>
       </div>
 
-      <div className="absolute top-[27%] left-1/2 transform -translate-x-1/2 -translate-y-1/2 font-minecraft text-[#F5F1DE] text-4xl">
+      <div className="inline-block absolute top-[15%] sm:top-[27%] left-1/2 transform -translate-x-1/2 -translate-y-1/2 font-minecraft text-[#F5F1DE] text-lg sm:text-4xl">
         <span className={style.dev} style={{ "--d": "'Full Stack Developer'" }}>
           Full Stack Developer
         </span>
       </div>
 
-      <div className="absolute -bottom-3 mx-10 h-96 z-50">
+      {/* <TextReveal text={text} /> */}
+
+      <div className="absolute -bottom-3 mx-10 h-60 sm:h-96 z-50">
         <GifPlayer
           gifDuration={4200}
           setCurrentGifIndex={setCurrentGifIndex}

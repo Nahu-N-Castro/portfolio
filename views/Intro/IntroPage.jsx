@@ -16,6 +16,12 @@ const gifsDay = [
   { src: "day-3.gif", type: "loop" },
   { src: "day-4.png", type: "loop" },
 ];
+const texts = [
+  { string: "Hey hola, ", delay: 1000, classes: "px-1" },
+  { string: "soy ", delay: 500, classes: "px-1" },
+  { string: "Nahuel ", delay: 800, classes: "text-red-500 px-1" },
+  { string: "un desarollador web! ", delay: 700, classes: "px-1" },
+];
 
 function IntroPage() {
   const [currentGifIndex, setCurrentGifIndex] = useState(0);
@@ -46,7 +52,7 @@ function IntroPage() {
         />
       )}
 
-      {currentGifIndex === 2 && <TextReveal />}
+      {currentGifIndex === 2 && <TextReveal texts={texts} />}
 
       {currentGifIndex < 3 && (
         <>

@@ -1,14 +1,8 @@
+/* eslint-disable react/prop-types */
 import { useState, useEffect, useRef } from "react";
 import styles from "./TextReveal.module.css";
 
-const texts = [
-  { string: "Hey hola, ", delay: 1000, classes: "px-1" },
-  { string: "soy ", delay: 500, classes: "px-1" },
-  { string: "Nahuel ", delay: 800, classes: "text-red-500 px-1" },
-  { string: "un desarollador web! ", delay: 700, classes: "px-1" },
-];
-
-function TextReveal() {
+function TextReveal({ texts }) {
   const [text, setText] = useState("");
   const [textChildren, setTextChildren] = useState([]);
   const [currentTextIndex, setCurrentTextIndex] = useState(0);
@@ -22,7 +16,7 @@ function TextReveal() {
         setDelay(delay > 300 ? delay - 300 : 0);
         return;
       }
-      const textObject = texts[currentTextIndex];
+      const textObject = texts[currentTextIndex]
       if (textObject === undefined) {
         clearInterval(interval.current);
         return;
@@ -53,7 +47,7 @@ function TextReveal() {
     return () => {
       clearInterval(interval.current);
     };
-  }, [text, textChildren, currentTextIndex, delay, charIndex]);
+  }, [text, textChildren, currentTextIndex, delay, charIndex,texts]);
 
   return (
     <div

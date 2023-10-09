@@ -28,9 +28,7 @@ function GifPlayer({ gifs, currentGifIndex, setCurrentGifIndex, gifDuration }) {
 
   return (
     <img
-      className={`${
-        styles.gifAnimated
-      } h-full w-full max-w-screen object-cover object-center ${
+      className={`h-full w-full max-w-screen object-cover object-center disable-blur ${
         currentGifIndex === gifs.length - 1 ? styles.customOrigin : ""
       }`}
       src={gifs[currentGifIndex].src}

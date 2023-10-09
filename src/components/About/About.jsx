@@ -88,12 +88,15 @@ function About() {
           gifs={gifsMe}
         />
       </div>
-
-      <BackgroundParticles
-        widthRem={50}
-        heightRem={40}
-        num={isMobile ? 5 : 30}
-      />
+      {!isMobile ? (
+        <BackgroundParticles
+          widthRem={50}
+          heightRem={40}
+          num={isMobile ? 5 : 30}
+        />
+      ) : (
+        ""
+      )}
     </section>
   );
 }

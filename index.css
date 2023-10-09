@@ -2,6 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer components {
+  .disable-blur{
+    image-rendering: pixelated; 
+    -ms-interpolation-mode: nearest-neighbor;
+  }
+}
+
 @font-face {
   font-family: 'Noto Sans';
   src: url('/fonts/NotoSans-ExtraLight.ttf') format('truetype');

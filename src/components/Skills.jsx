@@ -111,7 +111,7 @@ function Skills() {
           <ListItem
             key={item.alt}
             {...item}
-            className="transition-transform transform hover:scale-125 "
+            className="transition-transform transform hover:scale-150 "
           />
         ))}
       </div>

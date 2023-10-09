@@ -22,7 +22,7 @@ const ProjectContainer = ({ onSelect, title }) => {
     <Draggable disabled={isMobile}>
       <div className="absolute top-10 sm:mx-8 right-0 w-full md:w-2/3  text-black z-40 animate-fadein">
         <WindowHeader onSelect={onSelect} title={title} />
-        <div className="absoulte dark:bg-neutral-900 z-10 shadow-neutral-900 bg-purple-100 dark:bg-opacity-90 shadow-lg dark:backdrop-blur-3xl p-5 animate-fadein rounded-b-md">
+        <div className="absoulte dark:bg-neutral-900 z-10 shadow-neutral-900 bg-purple-100 dark:bg-opacity-95 shadow-lg dark:backdrop-blur-2xl p-5 animate-fadein rounded-b-md">
           <ImageSlider slides={imagesSrc} />
 
           <button

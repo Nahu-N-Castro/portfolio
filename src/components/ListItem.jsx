@@ -12,7 +12,7 @@ function ListItem({ icon, alt, title, onSelect, className }) {
       role={isSelectable ? "button" : undefined}
       tabIndex={isSelectable ? "0" : undefined}
       onClick={isSelectable ? handleClick : undefined}
-      className={`flex flex-col justify-center items-center h-24 w-32 text-center cursor-pointer ${
+      className={`flex flex-col justify-center items-center h-24 w-32 text-center ${
         isSelectable
           ? "hover:bg-gray-300 hover:bg-opacity-60 focus:border-blue-500 focus:border-2 border-solid focus:outline-none"
           : ""

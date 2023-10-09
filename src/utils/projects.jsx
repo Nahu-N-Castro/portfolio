@@ -4,40 +4,45 @@ const projects = {
       <>
         <div className="text-white bg-neutral-800 border-neutral-800 border-[12px] rounded-b-xl rounded-tr-xl max-h-[25rem] sm:max-h-[10rem] overflow-y-scroll ">
           <p className="my-1">
-            Artify es una plataforma E-commerce para que artesanos puedan vender
-            y publicar de manera facil y comoda. Ayuda al usuario a encontrar
-            productos por ciudad, precios y categorias contando tambien con
-            ordenamiento y filtros de productos.
+            Artify es una plataforma de E-commerce diseñada para que los
+            artesanos puedan vender y publicar de manera fácil y cómoda. Esta
+            herramienta asiste a los usuarios al encontrar productos por ciudad,
+            precio y categorías. Además, ofrece opciones de ordenamiento y
+            filtros avanzados.
           </p>
           <p className="my-1">
-            Artify permite a los usuarios registrarse con Google o creando una
-            cuenta de manera local. Si el usuario olvida la contraseña, podrá
-            recuperala.
-          </p>
-          Cuenta con una pantalla principal donde se muestran todas las
-          publicaciones actuales, el usuario puede buscar en la barra de
-          búsqueda,
-          <p className="my-1">
-            Artify permite al artesano tener su propio perfil, donde encontraran
-            su numero de telefono, redes sociales y tambien las publicaciones.
-            Las publicaciones en artify cuentan con un sistemas de reseña, asi
-            el usuario podrá saberla antes de comprar, luego podra reseñar el
-            producto post compra
+            Los usuarios pueden registrarse en Artify a través de Google o
+            creando una cuenta localmente. En caso de olvidar la contraseña,
+            cuentan con una opción para recuperarla.
           </p>
           <p className="my-1">
-            El usuario podra navegar libremente por la página y agregar al
-            carrito uno o varios productos a la vez, luego dirigirse al carrito
-            donde podra modificar toda la lista antes de realizar la
-            transaccion. Para que la transacción sea confiable y segura, estamos
-            trabajando a traves de Mercado Pago.
+            La plataforma presenta una pantalla principal donde se exhiben las
+            publicaciones actuales, y se incluye una barra de búsqueda para
+            facilitar la localización de productos.
           </p>
           <p className="my-1">
-            Artify cuenta con un sistemas de notificaciones por correo, para que
-            el usuario lleve un seguimiento sobre sus acciones en la web. Tanto
-            como le usuario como el vendedor, tendran un apartado de Panel de
-            Control. Alli mismo, podran ver distintos tipos de metricas para
-            analizar sus compras/ventas en la web.
+            Artify otorga a los artesanos la posibilidad de tener su propio
+            perfil, en el cual se muestra su número de teléfono, redes sociales
+            y sus respectivas publicaciones. Además, las publicaciones en Artify
+            disponen de un sistema de reseñas, permitiendo a los usuarios
+            informarse previamente y, posterior a una compra, proporcionar su
+            propia reseña.
           </p>
+          <p className="my-1">
+            Los visitantes pueden navegar por la página libremente, añadir uno o
+            varios productos al carrito y, previo a realizar la transacción,
+            editar la lista de productos seleccionados. Para asegurar
+            transacciones confiables y seguras, trabajamos en conjunto con
+            Mercado Pago.
+          </p>
+          <p className="my-1">
+            Artify integra un sistema de notificaciones por correo, garantizando
+            que el usuario esté informado sobre sus acciones en la plataforma.
+            Tanto usuarios como vendedores cuentan con un panel de control donde
+            pueden visualizar distintos tipos de métricas para analizar sus
+            compras o ventas en el sitio.
+          </p>
+
           <section className="flex flex-col">
             <div className="flex flex-row">
               <h2 className="font-bold mr-2">Stack: </h2>
@@ -164,7 +169,7 @@ const projects = {
     overview: (
       <div className="p-4 text-white bg-neutral-800 border-neutral-800 border-[12px] rounded-b-xl rounded-tr-xl max-h-[25rem] sm:max-h-[10rem] overflow-y-scroll ">
         <p className="mb-3">
-          Durante tres intensas semanas en el bootcamp de Henry, sumergí en
+          Durante las intensas semanas en el bootcamp de Henry, sumergí en
           diversas tecnologías, construyendo un proyecto integral.
         </p>
 

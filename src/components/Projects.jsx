@@ -7,9 +7,9 @@ function Projects() {
   return (
     <section className="flex">
       <div className="grid grid-cols-2 sm:grid-cols-3 h-full w-full sm:w-[35%]">
-        <IconFolder title="rym" imgWidth="w-20 " onProject={setProject} />
-        <IconFolder title="pokedex" onProject={setProject} />
         <IconFolder title="artify" imgWidth="w-24" onProject={setProject} />
+        <IconFolder title="pokedex" onProject={setProject} />
+        <IconFolder title="rym" imgWidth="w-20 " onProject={setProject} />
       </div>
 
       {project && <ProjectContainer title={project} onSelect={setProject} />}

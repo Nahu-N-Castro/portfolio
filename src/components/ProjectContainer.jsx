@@ -20,19 +20,19 @@ const ProjectContainer = ({ onSelect, title }) => {
 
           <button
             onClick={() => setContent(true)}
-            className={`rounded-r-none rounded-bl-none p-2 focus:outline-none border-0 text-white ${
+            className={`rounded-r-none rounded-bl-none p-2 focus:outline-none border-0 ${
               content
-                ? "bg-rose-600 dark:bg-neutral-800 hover:border-0 text-rose-500 font-bold"
-                : "font-extralight"
+                ? "bg-rose-600 dark:bg-neutral-800 hover:border-0 text-rose-400 font-bold"
+                : "font-extralight text-white "
             }`}>
             Documentación
           </button>
           <button
             onClick={() => setContent(false)}
-            className={`rounded-l-none rounded-br-none p-2 focus:outline-none hover:outline-none border-0 text-white ${
+            className={`rounded-l-none rounded-br-none p-2 focus:outline-none hover:outline-none border-0 ${
               !content
-                ? "bg-rose-600 dark:bg-neutral-800 hover:border-0 text-rose-500 font-bold"
-                : "font-extralight"
+                ? "bg-rose-600 dark:bg-neutral-800 hover:border-0 text-rose-400 font-bold"
+                : "font-extralight text-white "
             }`}>
             ¿Qué hice?
           </button>

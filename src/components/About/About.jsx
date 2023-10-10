@@ -8,52 +8,37 @@ const gifsMe = [{ src: "/standby.gif" }, { src: "/talking.gif" }];
 const textAbout = [
   [
     <span key={1} className="animate-fade-right">
-      Hola Mundo!
+      ¡Hola a todos!
     </span>,
   ],
   [
     <span key={2} className="animate-fade-right">
-      Soy Nahuel, un apasionado Desarrollador Web formado en el Bootcamp de
-      SoyHenry y estudiante de Ingeniería en Sistemas de Información en la UTN
-      FRC. Mi primer acercamiento a la programación fue como Técnico
-      Electrónico, trabajando con Arduino. Esta experiencia despertó en mí un
-      profundo interés por la tecnología y su potencial para resolver problemas
-      cotidianos de maneras innovadoras y eficientes.
+      Soy Nahuel. A los 19 años comencé mi aventura en Ingeniería en Sistemas, y
+      fue ahí donde me sumergí de lleno en el apasionante mundo de la
+      programación. Ahora, a mis 22 años, ya me desenvuelvo como desarollador
+      Full Stack.
     </span>,
   ],
   [
     <span key={3} className="animate-fade-right">
-      Adopto una mentalidad crítica y curiosa, disfrutando del desafío de
-      mejorar código y descubrir soluciones innovadoras . Mi formación en
-      ingeniería y la intensidad del Bootcamp de SoyHenry han potenciado mi
-      habilidad para enfrentar desafíos y resolver problemas de manera
-      eficiente. Además, mis experiencias académicas y prácticas han cultivado
-      mi capacidad para colaborar y liderar equipos , fomentando un ambiente de
-      trabajo productivo y cooperativo.
+      Me gusta trabajar meticulosamente, siempre buscando la precisión en lo que
+      hago. Cuando trabajo en equipo, priorizo la comunicación y busco crear un
+      ambiente ameno y cooperativo.
     </span>,
   ],
   [
     <span key={4} className="animate-fade-right">
-      Veo la comunicación como un pilar fundamental que me permite trabajar
-      eficazmente tanto en equipos como en proyectos individuales. Además,
-      valoro mantener una organización clara y eficiente.
-    </span>,
-  ],
-  [
-    <span key={5} className="animate-fade-right">
-      Me emociona la oportunidad de aplicar mi pasión por la programación, mi
-      curiosidad innata y mi constante deseo de aprender en nuevos proyectos y
-      desafíos. Cada paso en este camino lo veo como una oportunidad para crecer
-      y continuar desarrollándome profesionalmente. Estoy interesado en unirme a
-      un equipo que valore la creatividad, la innovación y la colaboración, y
-      esté comprometido con ofrecer resultados de alta calidad a sus clientes.
+      Para mí, la comunicación es esencial; es la herramienta que nos permite
+      avanzar, ya sea en proyectos individuales o grupales. Y siempre he creído
+      que la organización es clave en nuestro rubro.
     </span>,
   ],
   [
     <span key={5} className="animate-fade-left">
-      Si estás buscando a alguien con habilidades en JavaScript, React, Redux,
-      Next.js, CSS, Tailwind, Figma, Express, PostgreSQL y Git, no dudes en
-      contactarme . ¡Será un placer trabajar juntos!
+      Si necesitas a alguien con experiencia en JavaScript, React, Redux,
+      Next.js, Express.js, Node.js, PostgreSQL, MySQL y que sea bueno en CSS
+      ¡aquí estoy! No dudes en escribirme. Será genial lo qué podremos hacer
+      juntos.
     </span>,
   ],
 ];
@@ -80,7 +65,7 @@ function About() {
         </span>
       </div>
 
-      <div className="flex justify-center items-end h-[48%] xsm:h-[51%] sm:h-[35%] md:h-[20%] sm:mt-10 sm:justify-center md:justify-start mx-2 lg:mx-32 xl:mx-52 lg:my-40 ">
+      <div className="flex justify-center items-end h-[48%] xsm:h-[51%] sm:h-[35%] md:h-[12%] sm:mt-10 sm:justify-center md:justify-start mx-2 lg:mx-32 xl:mx-52 lg:my-40 ">
         <VignetteText
           setCurrentIndex={setCurrentGifIndex}
           currentIndex={currentGifIndex}

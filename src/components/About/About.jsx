@@ -80,7 +80,7 @@ function About() {
         </span>
       </div>
 
-      <div className="flex justify-center items-end h-[48%] xsm:h-[51%] sm:h-[35%] md:h-[25%] sm:mt-10 sm:justify-start mx-2 xl:mx-52 lg:my-40 md:items-end ">
+      <div className="flex justify-center items-end h-[48%] xsm:h-[51%] sm:h-[35%] md:h-[20%] sm:mt-10 sm:justify-center md:justify-start mx-2 lg:mx-32 xl:mx-52 lg:my-40 ">
         <VignetteText
           setCurrentIndex={setCurrentGifIndex}
           currentIndex={currentGifIndex}

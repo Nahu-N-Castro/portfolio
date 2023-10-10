@@ -106,7 +106,7 @@ const items = [
 function Skills() {
   return (
 
-      <div className="h-[100%] grid grid-cols-2 py-10 pb-10 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5 justify-items-center overflow-y-auto max-h-[125%]">
+      <div className="h-[90%] grid grid-cols-2 p-10 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5 justify-items-center overflow-y-auto max-h-[125%]">
         {items.map((item) => (
           <ListItem
             key={item.alt}

@@ -1,6 +1,6 @@
 const Contact = () => {
   return (
-    <div className="md:flex xsm:justify-around items-center w-full h-full grid grid-cols-1 z-50">
+    <div className="md:flex xsm:justify-around items-center w-full h-[90%] grid grid-cols-1 z-50">
       <a
         href="mailto:nahu.castro@hotmail.com"
         className="flex flex-col text-white hover:text-red-400 items-center gap-5 transition-transform transform hover:scale-110">

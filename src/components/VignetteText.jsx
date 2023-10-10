@@ -1,4 +1,5 @@
 /* eslint-disable react/prop-types */
+import { ChevronLeft, ChevronRight } from "lucide-react";
 import { useEffect, useState } from "react";
 
 function VignetteText({ text, gifs }) {
@@ -31,8 +32,8 @@ function VignetteText({ text, gifs }) {
 
   return (
     <>
-      <section className="text-xs xsm:text-base sm:text-base md:text-xl lg:text-3xl bg-slate-50 border-4 border-zinc-950 text-black font-minecraft rounded-t-3xl rounded-br-3xl shadow-md shadow-black z-50 ">
-        <div className="pt-5 mx-5 sm:mx-10 ">{text[currentIndex]}</div>
+      <section className="text-xs xsm:text-base sm:text-base md:text-xl lg:text-2xl bg-slate-50 border-4 border-zinc-950 text-black font-minecraft rounded-t-3xl rounded-br-3xl shadow-md shadow-black z-50 ">
+        <div className="pt-5 mx-5 xsm:mx-10 ">{text[currentIndex]}</div>
 
         <div className="flex p-1 justify-end w-full">
           <button
@@ -43,11 +44,8 @@ function VignetteText({ text, gifs }) {
                 : "active:translate-y-1 "
             }`}
             onClick={goToPrevious}>
-            <img
-              className="transform scale-x-[-1] h-10"
-              src="/arrow.png"
-              alt="arrow"
-            />
+      
+            <ChevronLeft strokeWidth={6} size={58}  className="h-10 stroke-rose-700"/>
           </button>
 
           <button
@@ -58,14 +56,15 @@ function VignetteText({ text, gifs }) {
                 : "active:translate-y-1 "
             }`}
             onClick={goToNext}>
-            <img className="h-10" src="/arrow.png" alt="arrow" />
+              
+            <ChevronRight strokeWidth={6} size={58} className="h-10 stroke-rose-700"/>
           </button>
         </div>
       </section>
       <section className="absolute bottom-0 left-20 z-50">
         <img
           src={isTransition ? gifs[1].src : gifs[0].src}
-          className="h-40 xsm:h-60 sm:h-[25rem] disable-blur"
+          className="h-40 xsm:h-60 sm:h-[18rem] lg:h-[20rem] disable-blur"
         />
       </section>
     </>

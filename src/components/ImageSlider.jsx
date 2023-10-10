@@ -1,4 +1,5 @@
 /* eslint-disable react/prop-types */
+import { ChevronLeft, ChevronRight, Circle, CircleDot } from "lucide-react";
 import { useState } from "react";
 
 // eslint-disable-next-line react/prop-types
@@ -17,33 +18,44 @@ const ImageSlider = ({ slides }) => {
     setCurrentIndex(newIndex);
   };
 
-  const goToSlide = (slideIndex) => {
-    setCurrentIndex(slideIndex);
-  };
-
   return (
-    <div className="relative h-full sm:h-[400px] w-full overflow-hidden mb-10">
-      <div
-        className="absolute top-1/2 left-8 transform -translate-y-1/2 text-4xl text-black z-10 cursor-pointer"
+    <div className="relative h-full sm:h-[540px] w-full  mb-10">
+      <div className="h-full w-full flex overflow-hidden">
+        {slides.map((image) => (
+          <img
+            key={image.url}
+            src={`${image.url}`}
+            alt={image.title}
+            className="object-cover h-full w-full block shrink-0 grow-0"
+            style={{
+              transform: `translateX(${-100 * currentIndex}%)`,
+              transition: "transform 300ms ease-in-out",
+            }}
+          />
+        ))}
+      </div>
+      <button
+        className="block absolute top-0 bottom-0 p-4 text-6xl text-black z-10 cursor-pointer hover:bg-opacity-30 hover:bg-black transition-all ease-in-out"
         onClick={goToPrevious}>
-        ❰
-      </div>
-      <div
-        className="absolute top-1/2 right-8 transform -translate-y-1/2 text-4xl text-black z-10 cursor-pointer"
+        <ChevronLeft strokeWidth={5} />
+      </button>
+      <button
+        className="block absolute top-0 bottom-0 p-4 right-0 text-6xl text-black z-10 cursor-pointer hover:bg-opacity-30 hover:bg-black transition-all ease-in-out"
         onClick={goToNext}>
-        ❱
-      </div>
-      <img
-        src={`${slides[currentIndex].url}`}
-        alt={slides[currentIndex].title}
-        className="object-contain h-full w-full"
-      />
-      <div className="flex justify-center space-x-2 mt-4 sm:space-x-10">
+        <ChevronRight strokeWidth={5} />
+      </button>
+      <div className="flex justify-center space-x-5 mt-4 sm:space-x-10">
         {slides.map((_, slideIndex) => (
-          <div
-            className="w-4 h-4 bg-black dark:bg-white rounded-full cursor-pointer"
+          <button
+            className="w-4 h-4 fill-white stroke-slate-50 cursor-pointer"
             key={slideIndex}
-            onClick={() => goToSlide(slideIndex)}></div>
+            onClick={() => setCurrentIndex(slideIndex)}>
+            {currentIndex === slideIndex ? (
+              <CircleDot className="stroke-white scale-125 transition-all" />
+            ) : (
+              <Circle className="stroke-white" />
+            )}
+          </button>
         ))}
       </div>
     </div>

@@ -1,28 +1,21 @@
 /* eslint-disable react/prop-types */
-import { useState } from "react";
+import {useState } from "react";
 import WindowHeader from "./WindowHeader";
 import projects from "../utils/projects";
 import ImageSlider from "./ImageSlider";
 import Draggable from "react-draggable";
+import { imageCollections } from "../utils/imageCollections";
 
 const ProjectContainer = ({ onSelect, title }) => {
-  const imagesSrc = [
-    { url: `${title}/captura-01.png`, title: title },
-    { url: `${title}/captura-02.png`, title: title },
-    { url: `${title}/captura-03.png`, title: title },
-    { url: `${title}/captura-04.png`, title: title },
-    { url: `${title}/captura-05.png`, title: title },
-    { url: `${title}/captura-06.png`, title: title },
-    { url: `${title}/captura-07.png`, title: title },
-  ];
+  const imagesSrc = imageCollections[title] || []
   const [content, setContent] = useState(true);
   const isMobile = window.innerWidth <= 767;
 
   return (
     <Draggable disabled={isMobile}>
-      <div className="absolute top-10 sm:mx-8 right-0 w-full md:w-2/3  text-black z-40 animate-fadein">
+      <div className="absolute top-10 lg:mx-8 right-0 w-full lg:w-2/3 text-black z-40 animate-fadein">
         <WindowHeader onSelect={onSelect} title={title} />
-        <div className="absoulte dark:bg-neutral-900 z-10 shadow-neutral-900 bg-purple-100 dark:bg-opacity-95 shadow-lg dark:backdrop-blur-2xl p-5 animate-fadein rounded-b-md">
+        <div className="absoulte dark:bg-neutral-900 z-10 shadow-neutral-900 bg-purple-100 dark:bg-opacity-95 shadow-lg dark:backdrop-blur-2xl sm:p-5 animate-fadein rounded-b-md">
           <ImageSlider slides={imagesSrc} />
 
           <button

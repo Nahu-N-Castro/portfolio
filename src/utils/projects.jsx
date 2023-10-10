@@ -136,6 +136,18 @@ const projects = {
             equipo.
           </p>
         </div>
+        <div className="flex items-center justify-center">
+          <a href="https://artify-3.vercel.app/">
+            <button className="mt-3 mx-2 border-0 font-bold focus:outline-none px-4 py-2 rounded-md text-white bg-rose-700">
+              Visitar
+            </button>
+          </a>
+          <a href="https://github.com/ignaciocenni/artify">
+            <button className="mt-3 mx-2 border-0 font-bold focus:outline-none px-4 py-2 rounded-md text-white bg-rose-700">
+              Ver en Github
+            </button>
+          </a>
+        </div>
       </>
     ),
   },
@@ -189,49 +201,59 @@ const projects = {
       </>
     ),
     overview: (
-      <div className="p-4 text-white bg-neutral-800 border-neutral-800 border-[12px] rounded-b-xl rounded-tr-xl max-h-[25rem] sm:max-h-[10rem] overflow-y-scroll ">
-        <p className="mb-3">
-          Durante las intensas semanas en el bootcamp de Henry, sumergí en
-          diversas tecnologías, construyendo un proyecto integral.
-        </p>
+      <>
+        <div className="p-4 text-white bg-neutral-800 border-neutral-800 border-[12px] rounded-b-xl rounded-tr-xl max-h-[25rem] sm:max-h-[10rem] overflow-y-scroll ">
+          <p className="mb-3">
+            Durante las intensas semanas en el bootcamp de Henry, sumergí en
+            diversas tecnologías, construyendo un proyecto integral.
+          </p>
 
-        <ul className="list-disc pl-5 mb-3">
-          <li>
-            Adquirí destrezas avanzadas en{" "}
-            <strong className="text-rose-400">JavaScript</strong>, manejando
-            programación asincrónica y manipulación del DOM.
-          </li>
-          <li>
-            Exploré <strong className="text-rose-400">Vite.js</strong> y sus
-            optimizaciones para desarrollo y producción.
-          </li>
-          <li>
-            Creé interfaces con <strong className="text-rose-400">CSS</strong>{" "}
-            animaciones.
-          </li>
-          <li>
-            Configuré servidores con{" "}
-            <strong className="text-rose-400">NodeJs & Express.Js</strong>,
-            integrándome con bases de datos y otros servicios.
-          </li>
-          <li>
-            Manejé datos y relaciones en{" "}
-            <strong className="text-rose-400">Sequelize & PostgreSQL</strong>.
-          </li>
-          <li>
-            Construí componentes reactivos con{" "}
-            <strong className="text-rose-400">React & Redux</strong>,
-            gestionando estado global y optimizando la experiencia del usuario.
-          </li>
-        </ul>
+          <ul className="list-disc pl-5 mb-3">
+            <li>
+              Adquirí destrezas avanzadas en{" "}
+              <strong className="text-rose-400">JavaScript</strong>, manejando
+              programación asincrónica y manipulación del DOM.
+            </li>
+            <li>
+              Exploré <strong className="text-rose-400">Vite.js</strong> y sus
+              optimizaciones para desarrollo y producción.
+            </li>
+            <li>
+              Creé interfaces con <strong className="text-rose-400">CSS</strong>{" "}
+              animaciones.
+            </li>
+            <li>
+              Configuré servidores con{" "}
+              <strong className="text-rose-400">NodeJs & Express.Js</strong>,
+              integrándome con bases de datos y otros servicios.
+            </li>
+            <li>
+              Manejé datos y relaciones en{" "}
+              <strong className="text-rose-400">Sequelize & PostgreSQL</strong>.
+            </li>
+            <li>
+              Construí componentes reactivos con{" "}
+              <strong className="text-rose-400">React & Redux</strong>,
+              gestionando estado global y optimizando la experiencia del
+              usuario.
+            </li>
+          </ul>
 
-        <p>
-          Además de estas habilidades técnicas, mejoré mis habilidades blandas,
-          como la gestión del tiempo y la solución autónoma de problemas. Este
-          proyecto fortaleció mi base técnica y me preparó para futuros desafíos
-          en desarrollo web.
-        </p>
-      </div>
+          <p>
+            Además de estas habilidades técnicas, mejoré mis habilidades
+            blandas, como la gestión del tiempo y la solución autónoma de
+            problemas. Este proyecto fortaleció mi base técnica y me preparó
+            para futuros desafíos en desarrollo web.
+          </p>
+        </div>
+        <div className="flex items-center justify-center">
+          <a href="https://github.com/Nahu-N-Castro/pokemon-spa">
+            <button className="mt-3 mx-2 border-0 font-bold focus:outline-none px-4 py-2 rounded-md text-white bg-rose-700">
+              Ver en Github
+            </button>
+          </a>
+        </div>
+      </>
     ),
   },
   rym: {
@@ -315,6 +337,13 @@ const projects = {
             de mi pasión y carrera en el desarrollo web. Agradezco cada desafío
             y obstáculo, ya que me dieron la oportunidad de crecer y aprender.
           </p>
+        </div>
+        <div className="flex items-center justify-center">
+          <a href="https://github.com/Nahu-N-Castro/rickmortyapp">
+            <button className="mt-3 mx-2 border-0 font-bold focus:outline-none px-4 py-2 rounded-md text-white bg-rose-700">
+              Ver en Github
+            </button>
+          </a>
         </div>
       </>
     ),

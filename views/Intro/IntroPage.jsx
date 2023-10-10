@@ -17,10 +17,11 @@ const gifsDay = [
   { src: "day-4.png", type: "loop" },
 ];
 const texts = [
-  { string: "Hey hola, ", delay: 1000, classes: "px-1" },
-  { string: "soy ", delay: 500, classes: "px-1" },
-  { string: "Nahuel ", delay: 800, classes: "text-red-500 px-1" },
-  { string: "un desarollador web! ", delay: 700, classes: "px-1" },
+  { string: "Hey hola, ", delay: 700, classes: "px-1" },
+  { string: "soy ", delay: 200, classes: "px-1" },
+  { string: "Nahuel ", delay: 400, classes: "text-purple-500 px-1" },
+  { string: "un desarollador Full Stack, ", delay: 300, classes: "px-1" },
+  { string: "y me encantaria mostrarte mi portfolio! ", delay: 400, classes: "px-1" },
 ];
 
 function IntroPage() {

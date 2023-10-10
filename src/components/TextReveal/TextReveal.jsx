@@ -51,7 +51,7 @@ function TextReveal({ texts }) {
 
   return (
     <div
-      className={`${styles.customFont} top-0 sm:rounded-tl-2xl sm:rounded-br-2xl sm:rounded-tr-2xl bg-purple-200 border-4 border-purple-900 flex items-center justify-center cursor-pointer absolute sm:top-1/3 sm:left-[50%] xl:top-[40%] p-8 mt-5 `}>
+      className={`${styles.customFont} top-0 sm:rounded-tl-2xl sm:rounded-br-2xl sm:rounded-tr-2xl bg-slate-50 border-4 border-purple-900 flex items-center justify-center absolute sm:max-w-[30%] sm:top-1/3 sm:left-[50%] xl:top-[40%] p-5 mt-5 `}>
       <span className="text-black transition-opacity duration-300 mx-1 text-xl">
         {textChildren.map((span) => {
           return span;

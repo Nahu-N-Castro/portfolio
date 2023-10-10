@@ -61,7 +61,7 @@ function VignetteText({ text, gifs }) {
           </button>
         </div>
       </section>
-      <section className="absolute bottom-0 left-20 z-50">
+      <section className="absolute bottom-16 left-20 z-50">
         <img
           src={isTransition ? gifs[1].src : gifs[0].src}
           className="h-40 xsm:h-60 sm:h-[18rem] lg:h-[20rem] disable-blur"

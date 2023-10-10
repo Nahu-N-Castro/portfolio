@@ -14,7 +14,7 @@ const items = [
   {
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
     alt: "javascript",
-    title: "Javascript",
+    title: "JavaScript",
   },
   {
     icon: "https://icongr.am/devicon/react-original.svg?size=128&color=currentColor",
@@ -99,7 +99,7 @@ const items = [
   {
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg",
     alt: "Typescript",
-    title: "Typescript",
+    title: "TypeScript",
   },
 ];
 

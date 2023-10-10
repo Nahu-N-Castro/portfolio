@@ -19,14 +19,14 @@ const ImageSlider = ({ slides }) => {
   };
 
   return (
-    <div className="relative h-full sm:h-[540px] w-full  mb-10">
+    <div className="relative h-full sm:h-[35rem] w-full  mb-4">
       <div className="h-full w-full flex overflow-hidden">
         {slides.map((image) => (
           <img
             key={image.url}
             src={`${image.url}`}
             alt={image.title}
-            className="object-cover h-full w-full block shrink-0 grow-0"
+            className="object-cover h-full w-full block shrink-0 grow-0 "
             style={{
               transform: `translateX(${-100 * currentIndex}%)`,
               transition: "transform 300ms ease-in-out",
@@ -34,26 +34,27 @@ const ImageSlider = ({ slides }) => {
           />
         ))}
       </div>
+
       <button
-        className="block absolute top-0 bottom-0 p-4 text-6xl text-black z-10 cursor-pointer hover:bg-opacity-30 hover:bg-black transition-all ease-in-out"
+        className="block absolute top-0 bottom-0 p-4 z-10 cursor-pointer hover:bg-opacity-10 hover:bg-white  hover:backdrop-blur-sm transition-all ease-in-out"
         onClick={goToPrevious}>
-        <ChevronLeft strokeWidth={5} />
+        <ChevronLeft strokeWidth={5} className="stroke-rose-700"/>
       </button>
       <button
-        className="block absolute top-0 bottom-0 p-4 right-0 text-6xl text-black z-10 cursor-pointer hover:bg-opacity-30 hover:bg-black transition-all ease-in-out"
+        className="block absolute top-0 bottom-0 p-4 right-0  z-10 cursor-pointer hover:bg-opacity-10 hover:bg-white  hover:backdrop-blur-sm transition-all ease-in-out"
         onClick={goToNext}>
-        <ChevronRight strokeWidth={5} />
+        <ChevronRight strokeWidth={5}  className="stroke-rose-700"/>
       </button>
-      <div className="flex justify-center space-x-5 mt-4 sm:space-x-10">
+      <div className="flex justify-center space-x-5 bottom-5 left-1/2 -translate-x-1/2 sm:space-x-10 absolute bg-white bg-opacity-10 backdrop-blur-sm p-2 rounded-xl">
         {slides.map((_, slideIndex) => (
           <button
-            className="w-4 h-4 fill-white stroke-slate-50 cursor-pointer"
+            className="cursor-pointer"
             key={slideIndex}
             onClick={() => setCurrentIndex(slideIndex)}>
             {currentIndex === slideIndex ? (
-              <CircleDot className="stroke-white scale-125 transition-all" />
+              <CircleDot strokeWidth={2.5} className="stroke-rose-600 scale-110 transition-all" />
             ) : (
-              <Circle className="stroke-white" />
+              <Circle strokeWidth={2} className="stroke-rose-600" />
             )}
           </button>
         ))}

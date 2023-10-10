@@ -22,7 +22,7 @@ const ProjectContainer = ({ onSelect, title }) => {
             onClick={() => setContent(true)}
             className={`rounded-r-none rounded-bl-none p-2 focus:outline-none border-0 text-white ${
               content
-                ? "bg-rose-600 dark:bg-neutral-800 hover:border-0"
+                ? "bg-rose-600 dark:bg-neutral-800 hover:border-0 text-rose-500 font-bold"
                 : "font-extralight"
             }`}>
             Documentación
@@ -31,7 +31,7 @@ const ProjectContainer = ({ onSelect, title }) => {
             onClick={() => setContent(false)}
             className={`rounded-l-none rounded-br-none p-2 focus:outline-none hover:outline-none border-0 text-white ${
               !content
-                ? "bg-rose-600 dark:bg-neutral-800 hover:border-0"
+                ? "bg-rose-600 dark:bg-neutral-800 hover:border-0 text-rose-500 font-bold"
                 : "font-extralight"
             }`}>
             ¿Qué hice?

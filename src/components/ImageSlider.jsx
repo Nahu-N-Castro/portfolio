@@ -19,7 +19,7 @@ const ImageSlider = ({ slides }) => {
   };
 
   return (
-    <div className="relative h-full sm:h-[35rem] w-full  mb-4">
+    <div className="relative h-full xsm:h-[30rem] w-full  mb-2">
       <div className="h-full w-full flex overflow-hidden">
         {slides.map((image) => (
           <img

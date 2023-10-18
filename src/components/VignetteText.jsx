@@ -32,7 +32,7 @@ function VignetteText({ text, gifs }) {
 
   return (
     <>
-      <section className="text-xs xsm:text-base sm:text-base md:text-xl lg:text-2xl bg-slate-50 border-4 border-zinc-950 text-black font-minecraft rounded-t-3xl rounded-br-3xl shadow-md shadow-black z-50 ">
+      <section className="mb-12 sm:mb-0 text-xs xsm:text-base sm:text-base md:text-xl lg:text-2xl bg-zinc-300 dark:bg-slate-100 border-4 dark:border-black border-zinc-800 text-zinc-800 font-minecraft rounded-t-3xl rounded-br-3xl shadow-md shadow-black z-50 ">
         <div className="pt-5 mx-5 xsm:mx-10 ">{text[currentIndex]}</div>
 
         <div className="flex p-1 justify-end w-full">
@@ -61,7 +61,7 @@ function VignetteText({ text, gifs }) {
           </button>
         </div>
       </section>
-      <section className="absolute bottom-16 left-20 z-50">
+      <section className="absolute bottom-2 left-20 z-50">
         <img
           src={isTransition ? gifs[1].src : gifs[0].src}
           className="h-40 xsm:h-60 sm:h-[18rem] lg:h-[20rem] disable-blur"

@@ -18,7 +18,7 @@ function ListItem({ icon, alt, title, onSelect, className }) {
           : ""
       } ${className}`}>
       <img className="px-7 h-12" src={icon} alt={alt} />
-      <h2 className="select-none text-white mt-2">{title}</h2>
+      <h2 className="select-none text-white mt-2" style={{ textShadow: "0 2px 3px rgba(0, 0, 0, 0.7)" }}>{title}</h2>
     </li>
   );
 }

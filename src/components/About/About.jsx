@@ -49,8 +49,8 @@ function About() {
   const [currentGifIndex, setCurrentGifIndex] = useState(0);
 
   return (
-    <section className="flex flex-col h-full w-full z-10 sm:p-10">
-      <div className={style.container}>
+    <section className="flex flex-col h-full w-full z-10 sm:p-10 text-rose-500 dark:text-[#F5F1DE]">
+      <div className={style.container} >
         <span style={{ "--l": "'N'" }}>N</span>
         <span style={{ "--l": "'A'" }}>A</span>
         <span style={{ "--l": "'H'" }}>H</span>
@@ -59,13 +59,13 @@ function About() {
         <span style={{ "--l": "'L'" }}>L</span>
       </div>
 
-      <div className="flex justify-center pb-5 sm:pb-10 font-minecraft text-[#F5F1DE] text-lg md:text-xl lg:text-4xl">
+      <div className="flex justify-center pb-5 sm:pb-10 font-minecraft text-rose-500 dark:text-[#F5F1DE] text-lg md:text-xl lg:text-4xl">
         <span className={style.dev} style={{ "--d": "'Full Stack Developer'" }}>
           Full Stack Developer
         </span>
       </div>
 
-      <div className="flex justify-center items-end h-[48%] xsm:h-[51%] sm:h-[35%] md:h-[12%] sm:mt-10 sm:justify-center md:justify-start mx-2 lg:mx-32 xl:mx-52 lg:my-40 ">
+      <div className="flex justify-center items-end h-[48%] xsm:h-[51%] sm:h-[35%] md:h-[12%] sm:mt-10 md:justify-start mx-2 lg:mx-32 xl:mx-52 lg:my-40">
         <VignetteText
           setCurrentIndex={setCurrentGifIndex}
           currentIndex={currentGifIndex}

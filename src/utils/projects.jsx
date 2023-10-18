@@ -2,7 +2,7 @@ const projects = {
   artify: {
     detail: (
       <>
-        <div className="text-white bg-neutral-800 border-neutral-800 border-[12px] rounded-b-xl rounded-tr-xl max-h-[25rem] sm:max-h-[10rem] overflow-y-scroll ">
+        <div className="text-black dark:text-white bg-neutral-300 dark:bg-neutral-800 border-neutral-300 dark:border-neutral-800 border-[12px] rounded-b-xl rounded-tr-xl max-h-[25rem] sm:max-h-[10rem] overflow-y-scroll ">
           <p className="my-1">
             Artify es una plataforma de E-commerce diseñada para que los
             artesanos puedan vender y publicar de manera fácil y cómoda. Esta
@@ -87,7 +87,7 @@ const projects = {
     ),
     overview: (
       <>
-        <div className="text-white bg-neutral-800 border-neutral-800 border-[12px] rounded-b-xl rounded-tr-xl max-h-[25rem] sm:max-h-[10rem] overflow-y-scroll ">
+        <div className="text-black dark:text-white bg-neutral-300 dark:bg-neutral-800 border-neutral-300 dark:border-neutral-800 border-[12px] rounded-b-xl rounded-tr-xl max-h-[25rem] sm:max-h-[10rem] overflow-y-scroll ">
           <p className="mb-3">
             Durante el desarrollo del proyecto grupal en Henry, lideré el diseño
             frontend, creando la estética y estructura visual desde cero. Estas
@@ -154,7 +154,7 @@ const projects = {
   pokedex: {
     detail: (
       <>
-        <div className="text-white bg-neutral-800 border-neutral-800 border-[12px] rounded-b-xl rounded-tr-xl max-h-[25rem] sm:max-h-[10rem] overflow-y-scroll ">
+        <div className="text-black dark:text-white bg-neutral-300 dark:bg-neutral-800 border-neutral-300 dark:border-neutral-800 border-[12px] rounded-b-xl rounded-tr-xl max-h-[25rem] sm:max-h-[10rem] overflow-y-scroll ">
           <p className="my-1">
             La Pokédex cuenta con una página principal que ofrece paginación,
             facilitando la exploración de los diferentes Pokémon.
@@ -202,7 +202,7 @@ const projects = {
     ),
     overview: (
       <>
-        <div className="p-4 text-white bg-neutral-800 border-neutral-800 border-[12px] rounded-b-xl rounded-tr-xl max-h-[25rem] sm:max-h-[10rem] overflow-y-scroll ">
+        <div className="p-4 text-black dark:text-white bg-neutral-300 dark:bg-neutral-800 border-neutral-300 dark:border-neutral-800 border-[12px] rounded-b-xl rounded-tr-xl max-h-[25rem] sm:max-h-[10rem] overflow-y-scroll ">
           <p className="mb-3">
             Durante las intensas semanas en el bootcamp de Henry, sumergí en
             diversas tecnologías, construyendo un proyecto integral.
@@ -259,7 +259,7 @@ const projects = {
   rym: {
     detail: (
       <>
-        <div className="text-white bg-neutral-800 border-neutral-800 border-[12px] rounded-b-xl rounded-tr-xl max-h-[25rem] sm:max-h-[10rem] overflow-y-scroll ">
+        <div className="text-black dark:text-white bg-neutral-300 dark:bg-neutral-800 border-neutral-300 dark:border-neutral-800border-[12px] rounded-b-xl rounded-tr-xl max-h-[25rem] sm:max-h-[10rem] overflow-y-scroll p-3 ">
           <p className="my-1">
             Rick and Morty Integrator representó{" "}
             <strong className="text-rose-400">mi primera inmersión </strong>
@@ -299,7 +299,7 @@ const projects = {
     ),
     overview: (
       <>
-        <div className="text-white bg-neutral-800 border-neutral-800 border-[12px] rounded-b-xl rounded-tr-xl max-h-[25rem] sm:max-h-[10rem] overflow-y-scroll ">
+        <div className="text-black dark:text-white bg-neutral-300 dark:bg-neutral-800 border-neutral-300 dark:border-neutral-800 border-[12px] rounded-b-xl rounded-tr-xl max-h-[25rem] sm:max-h-[10rem] overflow-y-scroll ">
           <p className="mb-3">
             Durante el desarrollo del proyecto Rick and Morty Integrator, me
             embarqué en un emocionante viaje de descubrimiento y aprendizaje.

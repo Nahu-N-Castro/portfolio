@@ -13,17 +13,17 @@ const ProjectContainer = ({ onSelect, title }) => {
 
   return (
     <Draggable disabled={isMobile}>
-      <div className="absolute top-4 lg:mx-8 right-0 w-full lg:w-2/3 text-black z-40 animate-fadein">
+      <div className="absolute top-12 lg:mr-5 right-0 w-full lg:w-[60%] text-black z-40 animate-fadein">
         <WindowHeader onSelect={onSelect} title={title} />
-        <div className="absoulte dark:bg-neutral-900 z-10 shadow-neutral-900 bg-purple-100 dark:bg-opacity-95 shadow-lg dark:backdrop-blur-2xl sm:p-5 animate-fadein rounded-b-md">
+        <div className="absoulte dark:bg-neutral-900 z-10 shadow-neutral-900 bg-purple-100 dark:bg-opacity-95 drop-shadow-xl dark:backdrop-blur-2xl sm:p-5 animate-fadein rounded-b-md">
           <ImageSlider slides={imagesSrc} />
 
           <button
             onClick={() => setContent(true)}
             className={`rounded-r-none rounded-bl-none p-2 focus:outline-none border-0 ${
               content
-                ? "bg-rose-600 dark:bg-neutral-800 hover:border-0 text-rose-400 font-bold"
-                : "font-extralight text-white "
+                ? "bg-neutral-300 dark:bg-neutral-800 hover:border-0 text-rose-700 dark:text-rose-400 font-bold"
+                : "font-extralight text-black dark:text-white "
             }`}>
             Documentación
           </button>
@@ -31,8 +31,8 @@ const ProjectContainer = ({ onSelect, title }) => {
             onClick={() => setContent(false)}
             className={`rounded-l-none rounded-br-none p-2 focus:outline-none hover:outline-none border-0 ${
               !content
-                ? "bg-rose-600 dark:bg-neutral-800 hover:border-0 text-rose-400 font-bold"
-                : "font-extralight text-white "
+              ? "bg-neutral-300 dark:bg-neutral-800 hover:border-0 text-rose-700 dark:text-rose-400 font-bold"
+              : "font-extralight text-black dark:text-white " 
             }`}>
             ¿Qué hice?
           </button>

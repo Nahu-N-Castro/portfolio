@@ -1,20 +1,11 @@
 .container{
-  background-image: url("/wallpaper-dark.jpeg");
   background-size: cover;
   background-position: center;
   display: flex; 
-  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   width: 100vw;
   height: 100vh;
   max-width: 100vw;
-}
-html.dark .container {
-  background-image: url("/wallpaper-light.jpeg");
-  background-size: cover;
-  background-position: center;
-  display: flex; 
-  justify-content: center;
-  width: 100vw;
-  height: 100vh;
-  max-width: 100vw;
+  overflow: hidden;
 }

@@ -16,7 +16,7 @@ function IconFolder({ title, imgWidth, imgPosition, onProject }) {
         src={`/${title}.png`}
         alt={title}
       />
-      <h2 className="absolute mt-2 left-1/2 transform -translate-x-1/2 text-black text-lg capitalize dark:text-white">
+      <h2 className="absolute mt-2 left-1/2 transform -translate-x-1/2 text-lg capitalize dark:text-white text-zinc-800">
         {title}
       </h2>
     </div>

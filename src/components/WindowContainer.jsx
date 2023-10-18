@@ -11,7 +11,7 @@ const WindowContainer = ({ onSelect, title }) => {
 
   return (
     <div
-      className={`absolute h-full w-full sm:top-10 flex-col sm:h-[91%] sm:w-[80%]  bg-neutral-950 z-10 shadow-neutral-950 dark:bg-opacity-75 shadow-lg dark:backdrop-blur-3xl rounded-lg animate-fadeinup overflow-hidden ${animationClass}`}>
+      className={`absolute h-full w-full sm:top-20 flex-col sm:h-[85%] sm:w-[80%] bg-neutral-100 bg-opacity-80 dark:bg-zinc-900 z-10 dark:shadow-zinc-900 shadow-black drop-shadow-2xl backdrop-blur-3xl dark:bg-opacity-90 rounded-lg animate-fadeinup overflow-hidden ${animationClass}`}>
       <WindowHeader
         onSelect={onSelect}
         title={title}

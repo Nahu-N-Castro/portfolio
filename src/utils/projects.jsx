@@ -72,12 +72,18 @@ const projects = {
           </section>
         </div>
         <div className="flex items-center justify-center">
-          <a href="https://artify-3.vercel.app/">
+          <a
+            href="https://artify-3.vercel.app/"
+            target="_blank"
+            rel="noopener noreferrer">
             <button className="mt-3 mx-2 border-0 font-bold focus:outline-none px-4 py-2 rounded-md text-white bg-rose-700">
               Visitar
             </button>
           </a>
-          <a href="https://github.com/ignaciocenni/artify">
+          <a
+            href="https://github.com/ignaciocenni/artify"
+            target="_blank"
+            rel="noopener noreferrer">
             <button className="mt-3 mx-2 border-0 font-bold focus:outline-none px-4 py-2 rounded-md text-white bg-rose-700">
               Ver en Github
             </button>
@@ -137,12 +143,18 @@ const projects = {
           </p>
         </div>
         <div className="flex items-center justify-center">
-          <a href="https://artify-3.vercel.app/">
+          <a
+            href="https://artify-3.vercel.app/"
+            target="_blank"
+            rel="noopener noreferrer">
             <button className="mt-3 mx-2 border-0 font-bold focus:outline-none px-4 py-2 rounded-md text-white bg-rose-700">
               Visitar
             </button>
           </a>
-          <a href="https://github.com/ignaciocenni/artify">
+          <a
+            href="https://github.com/ignaciocenni/artify"
+            target="_blank"
+            rel="noopener noreferrer">
             <button className="mt-3 mx-2 border-0 font-bold focus:outline-none px-4 py-2 rounded-md text-white bg-rose-700">
               Ver en Github
             </button>
@@ -192,7 +204,10 @@ const projects = {
           </section>
         </div>
         <div className="flex items-center justify-center">
-          <a href="https://github.com/Nahu-N-Castro/pokemon-spa">
+          <a
+            href="https://github.com/Nahu-N-Castro/pokemon-spa"
+            target="_blank"
+            rel="noopener noreferrer">
             <button className="mt-3 mx-2 border-0 font-bold focus:outline-none px-4 py-2 rounded-md text-white bg-rose-700">
               Ver en Github
             </button>
@@ -247,7 +262,10 @@ const projects = {
           </p>
         </div>
         <div className="flex items-center justify-center">
-          <a href="https://github.com/Nahu-N-Castro/pokemon-spa">
+          <a
+            href="https://github.com/Nahu-N-Castro/pokemon-spa"
+            target="_blank"
+            rel="noopener noreferrer">
             <button className="mt-3 mx-2 border-0 font-bold focus:outline-none px-4 py-2 rounded-md text-white bg-rose-700">
               Ver en Github
             </button>
@@ -289,7 +307,10 @@ const projects = {
           </section>
         </div>
         <div className="flex items-center justify-center">
-          <a href="https://github.com/Nahu-N-Castro/rickmortyapp">
+          <a
+            href="https://github.com/Nahu-N-Castro/rickmortyapp"
+            target="_blank"
+            rel="noopener noreferrer">
             <button className="mt-3 mx-2 border-0 font-bold focus:outline-none px-4 py-2 rounded-md text-white bg-rose-700">
               Ver en Github
             </button>
@@ -339,9 +360,107 @@ const projects = {
           </p>
         </div>
         <div className="flex items-center justify-center">
-          <a href="https://github.com/Nahu-N-Castro/rickmortyapp">
+          <a
+            href="https://github.com/Nahu-N-Castro/rickmortyapp"
+            target="_blank"
+            rel="noopener noreferrer">
             <button className="mt-3 mx-2 border-0 font-bold focus:outline-none px-4 py-2 rounded-md text-white bg-rose-700">
               Ver en Github
+            </button>
+          </a>
+        </div>
+      </>
+    ),
+  },
+  sesc: {
+    detail: (
+      <>
+        <div className="text-black dark:text-white bg-neutral-300 dark:bg-neutral-800 border-neutral-300 dark:border-neutral-800border-[12px] rounded-b-xl rounded-tr-xl max-h-[25rem] sm:max-h-[10rem] overflow-y-scroll p-3 ">
+          <section className="flex flex-col">
+            <p className="my-1">
+              SESC - Servicio Especializado de Electricidad presenta una SPA
+              diseñada para simplificar la navegación y el contacto con los
+              electricistas. Nuestro principal objetivo es brindar una
+              experiencia fluida que permita a los usuarios acceder fácilmente a
+              la información necesaria y, sobre todo, ponerse en contacto con el
+              equipo de expertos.
+            </p>
+            <p className="my-1">
+              La SPA se centra en la pureza de la navegabilidad. Cada sección
+              está cuidadosamente diseñada para guiar a los usuarios hacia la
+              información relevante y facilitar el proceso de contacto. La
+              interfaz intuitiva prioriza la eficiencia, asegurando que los
+              visitantes puedan explorar nuestros servicios, encontrar detalles
+              clave y, con un solo clic, acceder a opciones de contacto directo.
+            </p>
+
+            <div className="flex flex-row">
+              <h2 className="font-bold mr-2 text-rose-400">Stack: </h2>
+              <p className="italic">HTML, CSS, Tailwind, JavaScript. </p>
+            </div>
+            <div className="flex flex-row">
+              <h2 className="font-bold mr-2 text-rose-400">Frameworks: </h2>
+              <p className="italic">AlpineJS.</p>
+            </div>
+          </section>
+        </div>
+        <div className="flex items-center justify-center">
+          <a
+            href="https://github.com/Nahu-N-Castro/SESC-SPA"
+            target="_blank"
+            rel="noopener noreferrer">
+            <button className="mt-3 mx-2 border-0 font-bold focus:outline-none px-4 py-2 rounded-md text-white bg-rose-700">
+              Ver en Github
+            </button>
+          </a>
+          <a
+            href="https://sesc.com.ar/"
+            target="_blank"
+            rel="noopener noreferrer">
+            <button className="mt-3 mx-2 border-0 font-bold focus:outline-none px-4 py-2 rounded-md text-white bg-rose-700">
+              Visitar
+            </button>
+          </a>
+        </div>
+      </>
+    ),
+    overview: (
+      <>
+        <div className="text-black dark:text-white bg-neutral-300 dark:bg-neutral-800 border-neutral-300 dark:border-neutral-800 border-[12px] rounded-b-xl rounded-tr-xl max-h-[25rem] sm:max-h-[10rem] overflow-y-scroll ">
+          <p className="my-1">
+            SESC-SPA representó{" "}
+            <strong className="text-rose-400">
+              mi primera inmersión al freelance{" "}
+            </strong>
+            mientras buscando un trabajo formal, se me presentó este proyecto.
+          </p>
+          <p className="my-1">
+            Aproveche para aprender nuevas cosas, como{" "}
+            <strong className="text-rose-400">
+              SEO, hosting, dominios y servidores DNS.
+            </strong>
+          </p>
+          <p className="my-1">
+            Tambien debido a los requerimientos del proyecto, me adentre a un
+            pequeño y nuevo framework para mí, ideal para este proyecto{" "}
+            <strong className="text-rose-400">AlpineJS.</strong>
+          </p>
+        </div>
+        <div className="flex items-center justify-center">
+          <a
+            href="https://github.com/Nahu-N-Castro/SESC-SPA"
+            target="_blank"
+            rel="noopener noreferrer">
+            <button className="mt-3 mx-2 border-0 font-bold focus:outline-none px-4 py-2 rounded-md text-white bg-rose-700">
+              Ver en Github
+            </button>
+          </a>
+          <a
+            href="https://sesc.com.ar/"
+            target="_blank"
+            rel="noopener noreferrer">
+            <button className="mt-3 mx-2 border-0 font-bold focus:outline-none px-4 py-2 rounded-md text-white bg-rose-700">
+              Visitar
             </button>
           </a>
         </div>

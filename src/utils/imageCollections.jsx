@@ -20,4 +20,11 @@ export const imageCollections = {
     { url: "rym/captura-03.jpg", title: "rym-03" },
     { url: "rym/captura-04.jpg", title: "rym-04" },
   ],
+  sesc: [
+    { url: "sesc/captura-01.jpg", title: "sesc-01" },
+    { url: "sesc/captura-02.jpg", title: "sesc-02" },
+    { url: "sesc/captura-03.jpg", title: "sesc-03" },
+    { url: "sesc/captura-04.jpg", title: "sesc-04" },
+    { url: "sesc/captura-05.jpg", title: "sesc-05" },
+  ],
 };

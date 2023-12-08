@@ -10,6 +10,7 @@ function Projects() {
         <IconFolder title="artify" imgWidth="w-24" onProject={setProject} />
         <IconFolder title="pokedex" onProject={setProject} />
         <IconFolder title="rym" imgWidth="w-20 " onProject={setProject} />
+        <IconFolder title="sesc" imgWidth="w-20 " onProject={setProject} />
       </div>
 
       {project && <ProjectContainer title={project} onSelect={setProject} />}

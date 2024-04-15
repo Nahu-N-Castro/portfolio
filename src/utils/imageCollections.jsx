@@ -27,4 +27,15 @@ export const imageCollections = {
     { url: "sesc/captura-04.jpg", title: "sesc-04" },
     { url: "sesc/captura-05.jpg", title: "sesc-05" },
   ],
+  ibis: [
+    { url: "ibis/captura-01.jpg", title: "ibis-01" },
+    { url: "ibis/captura-02.jpg", title: "ibis-02" },
+    { url: "ibis/captura-03.jpg", title: "ibis-03" },
+    { url: "ibis/captura-04.jpg", title: "ibis-04" },
+    { url: "ibis/captura-05.jpg", title: "ibis-05" },
+    { url: "ibis/captura-06.jpg", title: "ibis-06" },
+    { url: "ibis/captura-07.jpg", title: "ibis-07" },
+    { url: "ibis/captura-08.jpg", title: "ibis-08" },
+    { url: "ibis/captura-09.jpg", title: "ibis-09" },
+  ],
 };

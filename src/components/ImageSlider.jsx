@@ -26,7 +26,7 @@ const ImageSlider = ({ slides }) => {
             key={image.url}
             src={`${image.url}`}
             alt={image.title}
-            className="object-cover h-full w-full block shrink-0 grow-0 "
+            className="object-contain h-full w-full block shrink-0 grow-0 "
             style={{
               transform: `translateX(${-100 * currentIndex}%)`,
               transition: "transform 300ms ease-in-out",

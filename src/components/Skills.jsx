@@ -17,9 +17,24 @@ const items = [
     title: "JavaScript",
   },
   {
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg",
+    alt: "Typescript",
+    title: "TypeScript",
+  },
+  {
     icon: "https://icongr.am/devicon/react-original.svg?size=128&color=currentColor",
     alt: "react",
     title: "React",
+  },
+  {
+    icon: "https://icon.icepanel.io/Technology/svg/Solid.js.svg",
+    alt: "solidjs",
+    title: "SolidJs",
+  },
+  {
+    icon: "https://alpinejs.dev/alpine_long.svg",
+    alt: "alpinejs",
+    title: "AlpineJs",
   },
   {
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
@@ -37,8 +52,8 @@ const items = [
     title: "Express",
   },
   {
-    icon: "https://camo.githubusercontent.com/91e66834eb064e372ae403ec874cd9f9968cfe1291fbe2969841003576ebd7f1/68747470733a2f2f70726f66696c696e61746f722e7269736861762e6465762f736b696c6c732d6173736574732f707269736d612e706e67",
-    alt: "primsa",
+    icon: "https://cdn.icon-icons.com/icons2/2148/PNG/512/prisma_icon_132076.png",
+    alt: "prisma",
     title: "Prisma",
   },
   {
@@ -52,7 +67,12 @@ const items = [
     title: "PostgreSQL",
   },
   {
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg",
+    icon: "https://media.dev.to/cdn-cgi/image/width=320,height=320,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Forganization%2Fprofile_image%2F1968%2F40db4713-914e-41dd-88a6-6c4f684e5ace.png",
+    alt: "supabase",
+    title: "Supabase",
+  },
+  {
+    icon: "https://static-00.iconduck.com/assets.00/tailwind-css-icon-2048x1229-u8dzt4uh.png",
     alt: "tailwind",
     title: "Tailwind",
   },
@@ -62,7 +82,7 @@ const items = [
     title: "NextJs",
   },
   {
-    icon: "https://camo.githubusercontent.com/5ef323398644d0544cbf5284d118cd027594a32f1ad973d13667f169d245e382/68747470733a2f2f70726f66696c696e61746f722e7269736861762e6465762f736b696c6c732d6173736574732f6c6f676f2d7469746c652e737667",
+    icon: "https://www.chartjs.org/docs/latest/favicon.ico",
     alt: "chartjs",
     title: "ChartJs",
   },
@@ -95,11 +115,6 @@ const items = [
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/illustrator/illustrator-plain.svg",
     alt: "ilustrator",
     title: "Ilustrator",
-  },
-  {
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg",
-    alt: "Typescript",
-    title: "TypeScript",
   },
 ];
 

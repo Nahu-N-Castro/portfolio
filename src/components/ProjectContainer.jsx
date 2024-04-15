@@ -38,9 +38,9 @@ const ProjectContainer = ({ onSelect, title }) => {
           </button>
 
           {content ? (
-            <div className="">{projects[title].detail}</div>
+            <div className="overflow-y-auto">{projects[title].detail}</div>
           ) : (
-            <div className="overflow-y-auto max-h-[45%]">
+            <div className="overflow-y-auto">
               {projects[title].overview}
             </div>
           )}
